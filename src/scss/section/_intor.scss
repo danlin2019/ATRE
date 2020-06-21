@@ -1,0 +1,90 @@
+#section-intor{
+  // overflow: hidden;
+  // position: absolute;
+ 
+  // left: 50%;
+  // top: 0;
+  // transform: translate(-50%, 0);
+
+  // height: 100vh;
+  // overflow: initial;
+  .header{
+    position: relative;
+    width: 94%;
+    // margin: 0 auto 7.6% auto;
+    margin: 0 auto pxTo100(40) auto;
+    // padding: 2.3% 0;
+    padding: pxTo100(15) 0;
+    // padding: 15px 0;
+  }
+  .in-logobox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .in-logo{
+    max-width: 85px;
+    width: 15%;
+    margin-right: 22px;
+  }
+  .in-title{
+    width: 49%;
+    max-width: 286px;
+    opacity: 0.1;
+  }
+  .in-menu{
+    position: absolute;
+    top:  15px;
+    right:  3.2%;
+    width: 11%;
+    max-width: 65px;
+    opacity: 0.1;
+  }
+  .bg{
+    width: 94%;
+    margin: auto;
+  }
+  .container{
+    width: 94%;
+    margin: auto;
+  }
+
+
+  .in-im{
+    display: block;
+    margin: 0 auto pxToEm(55) auto;
+    width: 79%;
+    max-width: 444px;
+  }
+  .in-step{
+    font-size: 24px;
+    // font-size: 1.6vw;
+    line-height: 1.5;
+    margin-bottom: 4%;
+    span{
+      display: block;
+    }
+    b{
+      color: $red;
+    }
+  }
+  .gift-time{
+    margin-bottom: 40px;
+    h3{
+      font-size: 24px;
+    // font-size: 1.6vw;
+      color: $red;
+      margin-bottom: 2%;
+    }
+    img{
+      width: 98%;
+      max-width: 585px;
+    }
+  }
+
+  @include screen(640px) {
+    .in-step, .gift-time h3{
+      font-size: 4vw;
+    }
+  }
+}

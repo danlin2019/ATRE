@@ -1,0 +1,330 @@
+//------------------------- 寬高預設100% -------------------------//
+$width: 100%;
+$height: 100%;
+//------------------------- media queries -------------------------//
+
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+
+@mixin xl-width() {
+  @media all and (min-width: $xl) {
+        @content;
+     }
+}
+@mixin lg-width() {
+  @media all and (min-width: $lg) {
+        @content;
+     }
+}
+@mixin md-width() {
+  @media all and (min-width: $md) {
+        @content;
+     }
+}
+
+@mixin sm-width() {
+  @media all and (min-width: $sm) {
+        @content;
+     }
+}
+
+//media-queries的最大寬度
+@mixin screen($res-max){ 
+  @media screen and ( max-width: $res-max ){ 
+      @content; 
+  } 
+} 
+
+//media-queries的最小寬度
+@mixin screen_min($res-min){ 
+  @media screen and ( min-width: $res-min ){ 
+      @content; 
+  } 
+}
+//media-queries的最小最大寬度
+@mixin screen_and($res-min, $res-max){ 
+  @media screen and ( min-width: $res-min ) and ( max-width: $res-max ){ 
+      @content; 
+  } 
+} 
+
+//------------------------- animation的keyframes -------------------------//
+
+@mixin keyframes($name){ 
+  @keyframes #{$name} { 
+    @content; 
+  } 
+} 
+  
+//------------------------- px轉rem -------------------------//
+
+@function pxToEm($px, $base: 16) { 
+  @return ($px / $base) * 1rem; 
+}
+
+
+//------------------------- px轉vw -------------------------//
+
+@function pxToVw($px) {
+  @return (100 / 640 * $px) * 1vw;
+}
+
+//------------------------- px轉vh -------------------------//
+
+@function pxToVh($px) {
+  @return ($px / 960 * 40) * 1vh;
+}
+
+//------------------------- px轉% -------------------------//
+
+@function pxTo100($px) {
+  @return ($px / 640) * 100%;
+}
+
+//------------------------- 限定行數  行高 行數(行高x行數)x1rem ---------//
+
+@mixin clamp($lh,$clamp){
+  height: ($lh*$clamp) * 1em;
+  line-height: $lh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $clamp; /* 第幾行要顯示點點點 */
+  -webkit-box-orient: vertical;
+}
+
+//------------------------- 漸層色 ------------------------- //
+
+@mixin gradient($direction, $list) { 
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient(to $direction, $list);  
+}
+
+// @include gradient(right, $headbg);
+// $headbg: #83df99, #e8c77d, #ec7478;
+  
+//------------------------- inline-block左右空隙用 -------------------------//
+
+@mixin vis(){
+  letter-spacing: -4px;//根據不同字體字號或許需要做一定的調整
+  word-spacing: -4px;
+  font-size: 0;
+}
+@mixin vis_s($fize:20px){
+font-size: $fize;
+letter-spacing: normal;
+word-spacing: normal;
+display:inline-block;
+*display: inline;
+zoom:1;
+}
+
+//------------------------- 浮動置中 -------------------------//
+
+@mixin position($position_x,$position_y,$coordinate_x,$coordinate_y){
+  position: absolute;
+  top: $position_x;
+  left: $position_y;
+  transform:translate($coordinate_x,$coordinate_y);
+}
+
+//------------------------- calc -------------------------//
+
+$wid:'';
+@mixin calc($wid){
+   width: -moz-calc(100% - #{$wid});
+   width: -webkit-calc(100% - #{$wid});
+   width: calc(100% - #{$wid});
+}
+
+//------------------------- menu slideUp Down-------------------------//
+
+@mixin slideUp(){
+  transition: 0.4s;
+  animation-name: slideUp;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  transform-origin: 50% 50% 0;
+  animation-duration: .5s;
+}
+
+@mixin slideDown(){
+  transition: 0.4s;
+  animation-name: slideDown;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  transform-origin: 51% 51% 0;
+  animation-duration: .25s;
+}
+
+//------------------------- 區塊寬度設定-------------------------//
+
+@mixin secction_width($width:93%, $max:1200px){
+  width: $width;
+  max-width:$max;
+  margin: 0 auto;
+  @extend %cf;
+}
+
+@mixin tion_width($width:93%, $max:1200px){
+width: $width;
+max-width:$max;
+margin: 0 auto;
+}
+
+//------------------------- 圖片100 -------------------------//
+
+@mixin imgpb($width:100%){
+  text-indent: -10000px;
+   img{
+       width: $width;
+   }
+}
+
+//------------------------- A TAG -------------------------//
+
+@mixin aLink(){
+  width: 100%;
+  height: 100%;
+  display: block;
+} 
+
+//------------------------- inline-block & vertical-align -------------------------//
+
+@mixin disvt($va:top){
+  display: inline-block;
+ vertical-align: $va;
+}
+
+//------------------------- clear float -------------------------//
+
+%cf {
+  zoom: 1;
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+      height: 0;
+      overflow: hidden;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+//------------------------- 垂直至中 -------------------------//
+
+@mixin vertical_td($width:100%,$height:100%){
+  width: $width;
+  height: $height;
+  display: table;
+  vertical-align: middle;
+}
+@mixin vertical_tr(){
+  display: table-cell;
+  vertical-align: middle;
+}
+
+//------------------------- 陰影 -------------------------//
+
+@mixin box-shadow($shadow...){ 
+  box-shadow:$shadow; 
+}
+
+//------------------------- 圓角 -------------------------//
+
+@mixin border($bo:99em){
+  border-radius: $bo;
+}
+
+//------------------------- 不規則圓角 左上 右上 右下 左下-------------------------//
+
+@mixin border_show($border_topleft,$border_topright,$bottom_right,$border_bottomleft){
+  
+  border-top-left-radius:$border_topleft;
+  border-top-right-radius: $border_topright,;
+  border-bottom-right-radius: $bottom_right;
+  border-bottom-left-radius: $border_bottomleft;
+}
+
+//------------------------- triangle 三角形 方向 尺寸 顏色 -------------------------//
+
+@mixin triangle($direction, $size, $borderColor ) { 
+  content:""; 
+  height: 0;
+  width: 0; 
+  @if $direction == top { 
+    border-bottom:$size solid $borderColor; 
+    border-left:$size dashed transparent; 
+    border-right:$size dashed transparent; 
+  } @else if $direction == right { 
+    border-left:$size solid $borderColor; 
+    border-top:$size dashed transparent; 
+    border-bottom:$size dashed transparent; 
+  } @else if $direction == bottom { 
+    border-top:$size solid $borderColor; 
+    border-left:$size dashed transparent; 
+    border-right:$size dashed transparent; 
+  } @else if $direction == left { 
+    border-right:$size solid $borderColor; 
+    border-top:$size dashed transparent; 
+    border-bottom:$size dashed transparent; 
+  } 
+}
+
+
+@mixin triangle_specially($direction, $height , $width, $borderColor){
+content: "";
+width: 0;
+height: 0;
+border-style: solid;
+@if $direction == left_top{ //左上
+    border-width: $height $width 0 0;
+    border-color: $borderColor transparent transparent transparent;
+}@else if $direction == left_l{ //左
+  border-width: $width $height $width 0;
+  border-color: transparent $borderColor transparent transparent;
+}@else if  $direction == right_bottom{ //右下
+    border-width: 0 0 $height  $width;
+    border-color: transparent transparent $borderColor transparent;
+}@else if  $direction == right_r{ //右
+    border-width: $height 0 $height $width;
+    border-color: transparent transparent transparent $borderColor;
+}@else if  $direction == bottom_a { //下
+  border-width: $height $width 0 $width;
+  border-color: $borderColor transparent transparent transparent;
+}
+}
+
+//------------------------- 耶書新增 -------------------------//
+// 依比例縮放
+@mixin aspect-ratio($width, $height) {
+  &:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+// 依比例縮放 含 背景撐滿
+@mixin aspect-ratio-bg-img($width, $height, $img) {
+  background-image: url($img);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  &:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}

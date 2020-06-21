@@ -1,0 +1,35 @@
+- var d = Date.now()
+doctype html
+html(lang="zh-tw")
+  head
+    include ../components/head.pug
+  body
+    include ../components/header.pug
+    div#wrapper
+      //- intro
+      include ../section/intor.pug
+      //- indexinde
+      include ../section/index.pug
+      //- 心理測驗1
+      include ../section/topic1.pug
+      //- 心理測驗2
+      include ../section/topic2.pug
+      //- 心理測驗3
+      include ../section/topic3.pug
+      //- 心理測驗4
+      include ../section/topic4.pug
+      //- 心理測驗5
+      include ../section/topic5.pug
+      //- 心理測驗6
+      include ../section/topic6.pug
+      //-結果頁
+      include ../section/resule.pug
+      //-活動辦法
+      include ../section/rule.pug
+      //-最新優惠
+      include ../section/news.pug
+    script(src='js/vendors.js')
+    script(src='https://cdn.jsdelivr.net/npm/vue@2.6.11')
+    script(src='js/index.js?v=' + d)
+
+    

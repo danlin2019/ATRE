@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+// All
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b,
+div,
+span,
+iframe,
+ul,
+ol,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+
+::-webkit-input-placeholder {
+  color: #6d6263;
+  line-height: normal;
+}
+
+
+::-moz-placeholder {
+  color: #6d6263;
+  line-height: normal;
+}
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  color: $black;
+  line-height: 1.5rem;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  word-break: break-word;
+  font-family: $notofont;
+  color: #373737;
+  overflow: hidden;
+  background-size: cover;
+  button {
+    border: none;
+
+  }
+}
+
+// #Wrapper 
+#wrapper {
+  width: 100%;
+  max-width: 640px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: auto;
+}
+
+
+// 區塊
+//
+// 各區塊控制
+
+
+
+// #section-login
+//   display: block
+
+// 區塊
+//
+// TODO 待整理中
+
+#section-intor,
+#section-index,
+#section-topic1,
+#section-topic2,
+#section-topic3,
+#section-topic4,
+#section-topic5,
+#section-topic6,
+#section-resule,
+#section-rule,
+#section-news{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  max-width: 640px;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+
+  &.active {
+    pointer-events: auto;
+    
+  }
+}

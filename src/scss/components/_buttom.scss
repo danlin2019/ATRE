@@ -1,0 +1,15 @@
+.btn{
+  background: #d72f83;
+  font-size: 24px;
+  line-height: 2.5;
+  text-align: center;
+  color: #e8e8e8;
+  width: 45%;
+  max-width: 203px;
+  margin: 0 auto;
+  cursor: pointer;
+  @include screen(640px) {
+    font-size: 4vw;
+    line-height: 2.8;
+  }
+}

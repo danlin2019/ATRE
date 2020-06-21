@@ -1,0 +1,36 @@
+@charset 'utf-8';
+
+// base
+@import "base/_normalize.min.scss";
+
+
+// variables mixin
+@import "abstracts/_variable.scss";
+@import "abstracts/_mixin.scss";
+
+// components
+@import "components/_buttom.scss";
+@import "components/_bg.scss";
+
+// 全站共用
+@import "layout/_header.scss";
+@import "layout/_menu.scss";
+@import "layout/_footer.scss";
+@import "layout/_share.scss";
+
+// page 分頁
+@import "pages/_index.scss";
+
+// section 區塊 
+@import "section/_index.scss";
+@import "section/_intor.scss" ;
+@import "section/_news.scss" ;
+@import "section/_resule.scss" ;
+@import "section/_rule.scss" ;
+@import "section/_topic.scss" ;
+
+// slider 區塊 
+@import "slider/_slider-1.scss" ;
+@import "slider/_slider-2.scss" ;
+@import "slider/_slider-3.scss" ;
+@import "slider/_slider-4.scss" ;

@@ -1,0 +1,31 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94%;
+  max-width: 640px;
+  margin: 0 auto pxTo100(40) auto;
+  padding: pxTo100(15) 0;
+  z-index: 1;
+  .logobox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .logo{
+    max-width: 85px;
+    width: 15%;
+    margin-right: 22px;
+  }
+  .title{
+    width: 49%;
+    max-width: 286px;
+    opacity: 0;
+  }
+  &.active{
+    .title{
+      opacity: 1;
+    }
+  }
+}

@@ -3,12 +3,12 @@ doctype html
 html(lang="zh-tw")
   head
     include ../components/head.pug
+    
   body
-    include ../components/header.pug
-    div#wrapper
-      //- intro
-      include ../section/intor.pug
+    #wrapper
+      include ../components/header.pug
       //- indexinde
+      
       include ../section/index.pug
       //- 心理測驗1
       include ../section/topic1.pug
@@ -28,8 +28,7 @@ html(lang="zh-tw")
       include ../section/rule.pug
       //-最新優惠
       include ../section/news.pug
-    script(src='js/vendors.js')
-    script(src='https://cdn.jsdelivr.net/npm/vue@2.6.11')
-    script(src='js/index.js?v=' + d)
-
-    
+      //- intro
+      include ../section/intor.pug
+  script(src='js/vendors.js')
+  script(src='js/index.js?v=' + d)

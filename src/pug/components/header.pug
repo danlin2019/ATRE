@@ -1,21 +1,27 @@
 header
-  .logobox 
-    img.logo(src="img/header/logo.svg")
-    img.title(src="img/header/title_text.png")
-  .menu-wrapper
-    .hamburger-menu
+  .header-box(:class="{ active: isActive }")
+    .logobox 
+      img.logo(src="img/header/logo.svg")
+      img.title(src="img/header/title_text.png")
+    .menu-wrapper(@click="menuList")
+      .hamburger-menu
   .nav-box
     nav
       ul
         li
-          a(href="javascript:;") 
-            
+          a(href="javascript:;")
+            img(src="img/header/menu-1.png")
+        li
+          a(href="javascript:;")
+            img(src="img/header/menu-2.png")
         li
           a(href="javascript:;") 
-            
+            img(src="img/header/menu-3.png")
         li
-          a(href="javascript:;") 
-           
-        li
-          a(href="javascript:;") 
-            
+          a(href="https://atre.com.tw/" target="_blank") 
+            img(src="img/header/menu-4.png")
+      .link
+        a(href="https://www.facebook.com/atre.tw/" target="_blank")
+          img(src="img/header/fb-icon.png")
+        a(href="https://www.instagram.com/atresnap_taipei/" target="_blank")
+          img(src="img/header/ig-icon.png")

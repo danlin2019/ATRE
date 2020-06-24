@@ -1,13 +1,22 @@
+#app{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 .nav-box {
   display: none;
   position: fixed;
   right: initial;
   left: 0;
-  top: 70px;
-  background: #1e2022;
+  top: 0px;
+  background: rgba($white,92%);
   max-width: 100%;
   width: 100%;
-  padding: 14% 0;
+  height: 100%;
+  padding-top: 14%;
+  @include screen(640px) {
+    padding-top: 33%;
+  }
   ul {
     display: block;
   }
@@ -15,16 +24,30 @@
     list-style: none;
     text-align: center;
     position: relative;
-    text-transform: uppercase;
+    width: 58%;
+    max-width: 338px;
+    margin: 0 auto 5vh auto;
+    img{
+      width: 100%;
+    }
   }
   a {
     text-decoration: none;
-    height: 82px;
-    transition: .4s;
-    margin-bottom: 13px;
-    font-size: pxToEm(19);
-    letter-spacing: 4px;
-    color: #000000;
+    display: block;
+  }
+  .link{
+    display: flex;
+    justify-content: center;
+    img{
+      width: 100%;
+    }
+    a{
+      width: 15%;
+      max-width: 75px;
+    }
+    a:nth-child(1) {
+      margin-right: 4%;
+    }
   }
 }
 
@@ -38,8 +61,8 @@ $bar-spacing: 14px;
 .menu-wrapper {
   background: $red;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -8%;
+  right: 2.6%;
   bottom: 0;
   margin: auto;
   width: 65px;

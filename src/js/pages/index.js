@@ -1,6 +1,6 @@
 // @prepros-prepend ../section/news.js
 // @prepros-prepend ../section/rule.js
-// @prepros-prepend ../section/Intor.js
+// @prepros-prepend ../section/intor.js
 // @prepros-prepend ../section/Index.js
 // @prepros-prepend ../section/Topic1.js
 // @prepros-prepend ../section/Topic2.js
@@ -9,8 +9,7 @@
 // @prepros-prepend ../section/Topic5.js
 // @prepros-prepend ../section/Topic6.js
 // @prepros-prepend ../section/Resule.js
-
-
+// @prepros-prepend ../section/development.js
 
 let currSection
 const sectionPool = []
@@ -24,21 +23,10 @@ function goto(sectionName) {
   let section
   let index
 
-  if (sectionName === 'Intor') {
-
-    index = checkSection(Intor)
-    console.log(Intor)
-    if (index > -1) {
-      section = sectionPool[index]
-    } else {
-      section = new Intor()
-      sectionPool.push(section)
-    }
-
-  } else if (sectionName === 'Index') {
+  if (sectionName === 'Index') {
 
     index = checkSection(Index)
-    console.log(Index)
+    // console.log(Index)
     if (index > -1) {
       section = sectionPool[index]
     } else {
@@ -145,12 +133,12 @@ function checkSection(_class) {
 
 
 if (location.hostname === 'localhost') {
-  goto('Resule')
+  goto('Index')
 } else {
   goto('Resule')
 }
 
 
-$('.btn-in').on('click',()=>{
+$('.btn-in').on('click', () => {
   goto('Index')
 })

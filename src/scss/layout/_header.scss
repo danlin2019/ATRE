@@ -1,30 +1,52 @@
-header{
+header {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 94%;
-  max-width: 640px;
+  left: 0;
+  width: 100%;
+  // max-width: 640px;
   margin: 0 auto pxTo100(40) auto;
-  padding: pxTo100(15) 0;
-  z-index: 1;
-  .logobox{
+
+  z-index: 999;
+
+  .header-box {
+    padding: pxTo100(8) 3% pxTo100(8) 1.3%;
+    width: 100%;
+    max-width: 640px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    // background: $white;
+    &.active {
+      .title {
+        display: block;
+      }
+    }
+  }
+
+  .logobox {
     width: 100%;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 2;
   }
-  .logo{
+
+  .logo {
     max-width: 85px;
     width: 15%;
     margin-right: 22px;
   }
-  .title{
+
+  .title {
     width: 49%;
     max-width: 286px;
-    opacity: 0;
+    display: none;
   }
-  &.active{
-    .title{
+
+  &.active {
+    .title {
       opacity: 1;
     }
   }

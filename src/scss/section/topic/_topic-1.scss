@@ -1,0 +1,100 @@
+// 1
+.topic1 {
+  position: relative;
+  // background: url(../img/guide/01.jpg) center top no-repeat !important;
+  // background-size: contain !important;
+  width: 100%;
+  margin: auto;
+
+  .topic-bg1,
+  .topic-bg2 {
+    background: #ffd8ec;
+  }
+
+  .topic-bg1 {
+    top: 33.2%;
+    width: 69.064%;
+    height: 30.483%;
+
+    @include screen(640px) {
+      height: 20.483%;
+    }
+  }
+
+  .topic-bg2 {
+    bottom: 11%;
+    right: 0;
+    width: 68.595%;
+    height: 20.24%;
+
+    @include screen(640px) {
+      height: 25%;
+    }
+  }
+
+  .topic-item-1 {
+    width: 38%;
+    max-width: 239px;
+    margin: 35% 0% 0% 1%;
+    z-index: 1;
+  }
+
+  .topic-item-2 {
+    width: 61%;
+    max-width: 386px;
+    margin: 50.9% 0% 0% 2.3%;
+    z-index: 2;
+  }
+
+  .topic-item-3 {
+    width: 26%;
+    max-width: 163px;
+    right: 0;
+    margin: 45.3% 6% 0% 0%;
+  }
+
+  .topic-item-4 {
+    width: 33%;
+    max-width: 205px;
+    right: 0;
+    margin: 82.2% 17.2% 0% 0%;
+  }
+
+  .topic-item-5 {
+    width: 15%;
+    max-width: 82px;
+    margin: 92.6% 0 0% 29.4%;
+    z-index: 3;
+  }
+
+  .item-light-1 {
+    max-width: 94px;
+    width: 15%;
+    right: 0;
+    margin-top: 59%;
+    margin-right: -1%;
+
+    z-index: 4;
+  }
+
+  .item-light-2 {
+    max-width: 94px;
+    width: 15%;
+    right: 0;
+    margin-top: 80%;
+    margin-right: 27%;
+    z-index: 4;
+  }
+
+  @include screen(360px) {
+    .container {
+      top: 65 !important;
+    }
+  }
+
+  @media only screen and (min-device-width : 375px) and (min-device-height : 812px) {
+    .container {
+      top: 4%;
+    }
+  }
+}

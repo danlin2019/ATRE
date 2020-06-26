@@ -1,0 +1,56 @@
+// 6
+.topic6{
+  position: relative;
+  // background: url(../img/guide/06.jpg) center top no-repeat !important;
+  // background-size: contain !important;
+  width: 100%;
+  margin: auto;
+  .topic-item-1{
+    width: 100%;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  .topic-item-2{
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+  .item-light-1,.item-light-2,.item-light-3,.item-light-4,.item-light-5,.item-light-6{
+    max-width: 94px;
+    width: 15%;
+    z-index: 2;
+  }
+  .item-light-1 {
+    top: 30%;
+    left: 6%;
+  }
+  .item-light-2 {
+    top: 41%;
+    right: 2%;
+  }
+  .item-light-3 {
+    bottom: 39%;
+    left: 19%;
+  }
+  .item-light-4 {
+    bottom: 32%;
+    right: 0%;
+  }
+  .item-light-5 {
+    bottom: 25%;
+    right: 9%;
+  }
+}
+
+@media only screen and (min-device-width : 375px) and (min-device-height : 812px) {
+  .isMobile .topic6 .item-light-1 {
+    // display: none;
+    top: 34%;
+  }
+}
+
+
+
+

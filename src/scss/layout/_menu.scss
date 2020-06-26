@@ -24,16 +24,21 @@
     list-style: none;
     text-align: center;
     position: relative;
-    width: 58%;
+    width: 52%;
     max-width: 338px;
-    margin: 0 auto 5vh auto;
+    margin: 0 auto 4vh auto;
     img{
       width: 100%;
+      display: block;
     }
   }
   a {
+    transition: .4s;
     text-decoration: none;
     display: block;
+    &:hover{
+      background: rgba(#d72f83,0.17);
+    }
   }
   .link{
     display: flex;
@@ -42,7 +47,7 @@
       width: 100%;
     }
     a{
-      width: 15%;
+      width: 12%;
       max-width: 75px;
     }
     a:nth-child(1) {

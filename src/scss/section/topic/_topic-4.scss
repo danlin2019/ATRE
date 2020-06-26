@@ -1,0 +1,71 @@
+// 4
+.topic4{
+  position: relative;
+  // background: url(../img/guide/04.jpg) center top no-repeat !important;
+  background-size: contain !important;
+  width: 100%;
+  margin: auto;
+  .topic-bg1,.topic-bg2{
+    z-index: 0;
+ 
+  }
+  .topic-bg1{
+    top: 37.5%;
+    right: 0;
+    width: 95%;
+    max-width: 605px;
+  }
+  .topic-bg2{
+    bottom: 24.7%;
+    left: 1%;
+    width: 80%;
+    max-width: 511px;
+    @include screen(640px) {
+      // height: 25%;
+    }
+  }
+  .bab-box{
+    width: 100%;
+    position: absolute;
+    top: 101.4%;
+    left: 8%;
+    z-index: 5;
+    .bab-content{
+      position: relative;
+    }
+
+  }
+  .topic-item-1{
+    position: relative;
+    width: 36%;
+    max-width: 200px;
+    z-index: 3;
+  }
+
+  .topic-item-2{
+    width: 33%;
+    max-width: 187px;
+    top: 18.9%;
+    left: 0%;
+  }
+
+  .topic-item-3{
+    width: 45%;
+    max-width: 284px;
+    top: 31.3%;
+    right: 16%;
+  }
+
+  .topic-item-4{
+    width: 46%;
+    max-width: 298px;
+    bottom: 15.5%;
+    left: 3%;
+  }
+  @include screen(640px) {
+
+  }
+}
+
+
+

@@ -33,11 +33,15 @@
   position: relative;
   bottom: -3vh;
   .person{
+    opacity: 0;
     width: 97%;
     margin: auto;
     @include screen(640px) {
       width: 100%;
     }
+  }
+  .slogan{
+    opacity: 0;
   }
 } 
 
@@ -96,7 +100,13 @@
 
 @include screen(640px) {
   .slider-img{
-    bottom: 8vh;
+    bottom: -6.5vh;
+  }
+  .slider-1 .bg{
+    top: 15%;
+    @include screen(375px) {
+      top: 18%;
+    }
   }
   .input-box{
     position: fixed;
@@ -110,5 +120,13 @@
     font-size: 4vw;
     letter-spacing: 2.32px;
     padding: 2.512% 3%;
+  }
+}
+
+
+@media only screen and (min-device-width : 375px) and (min-device-height : 812px) {
+  .isMobile .slider-img{
+    // display: none;
+    bottom: 5vh;
   }
 }

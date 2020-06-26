@@ -1,0 +1,99 @@
+#section-topic{
+  .container{
+    position: relative; 
+    height: 100%;
+    top: 0;
+    background: #fff;
+  }
+  .qa-content{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    border: 2px solid $red;
+    background: rgba(#fff,0.63);
+    width: 89.2%;
+    min-height: 146px;
+    margin: auto;
+    display: flex;
+    padding: 4% 2.5% 4% 2.5%;
+    margin-top: 21.2%;
+    @include screen(640px) {
+      min-height: 84px;
+      margin-top: 21.3%;
+
+    }
+    span{
+      overflow: hidden;
+      height: 4vh;
+      max-width: 67%;
+      display: inline-flex;
+    }
+    b{
+      font-family: 'Noto Serif TC', serif;
+      font-size: 39.5px;
+      font-weight: 900;
+      line-height: 1;
+      color: #ea3d93;
+      margin-right: 4%;
+    }
+    p{
+      width: 85%;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: 2.4px;
+      text-align: left;
+      color: #5c5c5c;
+    }
+    @include screen(640px) {
+      b{
+       font-size: 6vw;
+      }
+      p{
+        width: 84%;
+        font-size: 4vw;
+      }
+    }
+  }
+  input{
+    display: none;
+  }
+  .topic-radio{
+    max-width: 640px;
+    width: 100%;
+    position: fixed;
+    bottom: 2.4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 5;
+    label{
+      padding: 3.328% 0;
+      width: 50%;
+      opacity: 0.9;
+      background-color: #d72f83;
+      font-size: 21px;
+      // font-weight: bold;
+      line-height: 1.79;
+      // letter-spacing: 7px;
+      text-align: center;
+      color: #e8e8e8;
+      max-width: 290px;
+      margin-bottom: 3px;
+      letter-spacing: 0.12em;
+      &:nth-child(2),
+      &:nth-child(6){
+        margin-right: 3px;
+      }
+      @include screen(640px) {
+        width: 47%;
+        font-size: 4vw;
+      }
+    }
+  }
+}
+[class*="topic-item"],[class*="item-light-"],[class*="topic-bg"]{
+  position: absolute;
+  display: block;
+}

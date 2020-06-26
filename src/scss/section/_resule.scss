@@ -139,25 +139,15 @@
       }
     }
   }
+
+  .resule-1,.resule-2,.resule-3,.resule-4{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
   // 1
   .resule-1{
-    display: none;
-    .brand{
-      background-color: #dbeaf2;
-      @include screen(640px) {
-        padding: 9% 0% 8% 4%;
-      }
-      h3, h4,.share-text{
-        color: #00659b;
-      }
-      .share-text{
-        color: #00659b;
-      }
-    }
-  }
-  // 2
-  .resule-2{
-    display: none;
     .brand{
       background-color: #e2c8f2;
       h3, h4{
@@ -194,46 +184,23 @@
       margin-bottom: 8%;
     }
   }
-  // 3
-  .resule-3{
-    display: none;
-    .right-content{
-      .edn-p1{
-        left: 10%;
-        top: -1%;
-        z-index: 1;
-        max-width: 187px;
-        width: 59%;
-      }
-      .edn-p2{
-        right: 0;
-        top: 29%;
-        max-width: 210px;
-        width: 66%;
-      }
-    } 
-    .slogan-img{
-      margin-bottom: 6%;
-    }
+  // 2
+  .resule-2{
     .brand{
-      background-color: #c5ce9f;
-      margin: 0% 0 3.2% 0;
+      background-color: #dbeaf2;
       @include screen(640px) {
         padding: 9% 0% 8% 4%;
-      margin: 1% 0 4.2% 0;
-
       }
       h3, h4,.share-text{
-        color: #4b5911;
+        color: #00659b;
+      }
+      .share-text{
+        color: #00659b;
       }
     }
-    .share-text{
-      color: #4b5911;
-    }
   }
-  // 4
-  .resule-4{
-    // display: none;
+  // 3
+  .resule-3{
     .right-content{
       .edn-p1{
         left: 5%;
@@ -268,6 +235,43 @@
       color: #d17f0a;
     }
   }
+  // 4
+  .resule-4{
+    .right-content{
+      .edn-p1{
+        left: 10%;
+        top: -1%;
+        z-index: 1;
+        max-width: 187px;
+        width: 59%;
+      }
+      .edn-p2{
+        right: 0;
+        top: 29%;
+        max-width: 210px;
+        width: 66%;
+      }
+    } 
+    .slogan-img{
+      margin-bottom: 6%;
+    }
+    .brand{
+      background-color: #c5ce9f;
+      margin: 0% 0 3.2% 0;
+      @include screen(640px) {
+        padding: 9% 0% 8% 4%;
+      margin: 1% 0 4.2% 0;
+
+      }
+      h3, h4,.share-text{
+        color: #4b5911;
+      }
+    }
+    .share-text{
+      color: #4b5911;
+    }
+  }
+
   @include screen(640px) {
     .slogan{
       font-size: 2vw;

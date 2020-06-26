@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
   <head>
-    <title>樂迪拼拼樂</title>
+    <title>Atre東京女子圖鑑風格發現＿測看看妳是哪種東京風格？</title>
     <meta charset="UTF-8">
     <meta lang="tw">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- viewport-->
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- SEO-->
-    <meta name="title" content="樂迪拼拼樂">
-    <meta name="description" content="">
+    <meta name="title" content="Atre東京女子圖鑑風格發現＿測看看妳是哪種東京風格？">
+    <meta name="description" content="分享妳的「東京女子圖鑑風格發現」測驗結果，即可獲得來店禮！">
     <meta name="keywords" content="JWT">
     <!-- facebook-->
-    <meta property="og:title" content="樂迪拼拼樂">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Atre東京女子圖鑑風格發現＿測看看妳是哪種東京風格？">
+    <meta property="og:description" content="分享妳的「東京女子圖鑑風格發現」測驗結果，即可獲得來店禮！">
     <meta property="og:image" content="">
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
@@ -21,13 +21,16 @@
     <!-- favicon-->
     <link rel="shortcut icon" type="image/x-icon" href=" ">
     <link rel="icon" type="image/x-icon" href=" ">
-    <link rel="stylesheet" href="css/main.css?v=1592970360315">
+    <link rel="stylesheet" href="css/main.css?v=1593174999077">
+    <!-- Google Tag Manager-->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript)-->
+    <!-- End Google Tag Manager (noscript)-->
     <div id="wrapper">
       <header>
         <div class="header-box" :class="{ active: isActive }">
-          <div class="logobox"> <img class="logo" src="img/header/logo.svg"><img class="title" src="img/header/title_text.png"></div>
+          <div class="logobox"> <img class="logo" src="img/header/logo.svg" @click="goHome"><img class="title" src="img/header/title_text.png"></div>
           <div class="menu-wrapper" @click="menuList">
             <div class="hamburger-menu"></div>
           </div>
@@ -35,28 +38,29 @@
         <div class="nav-box">
           <nav>
             <ul>
-              <li><a href="javascript:;"><img src="img/header/menu-1.png"></a></li>
-              <li><a href="javascript:;"><img src="img/header/menu-2.png"></a></li>
-              <li><a href="javascript:;"> <img src="img/header/menu-3.png"></a></li>
+              <li><a href="javascript:;" @click="goHome"><img src="img/header/menu-1.png"></a></li>
+              <li><a href="javascript:;"><img src="img/header/menu-2.png" @click="goRule"></a></li>
+              <li><a href="javascript:;" @click="goNews"> <img src="img/header/menu-3.png"></a></li>
               <li><a href="https://atre.com.tw/" target="_blank"> <img src="img/header/menu-4.png"></a></li>
+              <li><a href="https://atre.com.tw/" target="_blank"> <img src="img/header/menu-5.png"></a></li>
             </ul>
             <div class="link"><a href="https://www.facebook.com/atre.tw/" target="_blank"><img src="img/header/fb-icon.png"></a><a href="https://www.instagram.com/atresnap_taipei/" target="_blank"><img src="img/header/ig-icon.png"></a></div>
           </nav>
         </div>
       </header>
-      <div id="section-index"><img class="title" src="img/index/title.png">
+      <section id="section-index"><img class="title" src="img/index/title.png">
         <div class="container"> 
           <div class="input-box">
             <div class="input-container"> 
               <h4>分享妳的atré東京女子圖鑑 即可獲得質感來店禮！</h4>
               <div class="input-content">
-                <input type="text" placeholder="輸入名稱開始測驗"><a href="javascript:;">></a>
+                <input type="text" placeholder="輸入名稱開始測驗" v-model.trim="data"><a href="javascript:;" @click="goTest"> <img src="img/arrw.png"></a>
               </div>
             </div>
           </div>
           <div class="slider-box">
             <div class="slider slider-1">
-              <div class="bg"><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="bg"><span></span><span></span><span></span><span></span><span></span><span></span></div>
               <div class="slider-img"><img class="slogan" src="img/index/slogan-1.png"><img class="person" src="img/index/banner-1.png"></div>
             </div>
             <div class="slider slider-2">
@@ -73,43 +77,120 @@
             </div>
           </div>
         </div>
-      </div>
-      <div id="section-topic1"></div>
-      <div id="section-topic2"></div>
-      <div id="section-topic3"></div>
-      <div id="section-topic4"></div>
-      <div id="section-topic5"></div>
-      <div id="section-topic6"></div>
-      <div id="section-resule">
-        <div class="resule resule-1">
-          <div class="container"> 
-            <div class="content">
-              <div class="left-content">
-                <div class="slogan">充滿活力，<br>自在散策的地方。</div><img class="slogan-img" src="img/result/end-1.jpg">
-                <ul>
-                  <li><span>以不過合身的大地色系服飾為主</span> </li>
-                  <li> <span>具品牌忠誠度，喜歡低調展現服<br>飾與自我質感</span> </li>
-                  <li> <span>與其崇拜偶像，更愛搞笑藝人</span> </li>
-                  <li> <span>與其跟流行，自己喜歡更重要</span> </li>
-                </ul>
-              </div>
-              <div class="right-content"><img class="edn-p1" src="img/result/ppl1.png"><img class="edn-p2" src="img/result/plant1.png"></div>
-            </div>
-            <div class="brand">
-              <h3>推薦品牌：</h3>
-              <ul>
-                <li><img src="img/result/brand-1.jpg">
-                  <div class="brand-text">
-                    <h4>BEAMS</h4>
-                    <p>日本人氣品牌，選品視角獨特，風格多樣並持續創新。 </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="share-text">[分享妳的測驗結果，就有機會領取atré限量贈禮]</div>
+      </section>
+      <section class="topic1" id="section-topic">
+        <div class="container">
+          <div class="qa-content"><b>Q1</b>
+            <p>Hi,<span>{{userName}} </span>您好～<br>週末決定到百貨公司悠閒逛逛～<br>妳的裝扮重點會放在...？</p>
+          </div>
+          <div class="topic-bg1"></div>
+          <div class="topic-bg2"></div><img class="topic-item-1" src="img/topic/1/smell.png"><img class="topic-item-2" src="img/topic/1/bag.png"><img class="topic-item-3" src="img/topic/1/earing.png"><img class="topic-item-4" src="img/topic/1/shoes.png"><img class="topic-item-5" src="img/topic/1/lipstick.png"><img class="item-light-1" src="img/topic/1/light.png"><img class="item-light-2" src="img/topic/1/light.png">
+          <div class="topic-radio">
+            <input id="issue1-1" type="radio" value="4" v-model="test1">
+            <label for="issue1-1">黃色笑臉包 ></label>
+            <input id="issue1-2" type="radio" value="3" v-model="test1">
+            <label for="issue1-2">金色細跟鞋 ></label>
+            <input id="issue1-3" type="radio" value="2" v-model="test1">
+            <label for="issue1-3">珍珠垂掛耳環 ></label>
+            <input id="issue1-4" type="radio" value="1" v-model="test1">
+            <label for="issue1-4">亮桃紅雙唇 ></label>
           </div>
         </div>
-        <div class="resule resule-2">
+      </section>
+      <section class="topic2" id="section-topic">
+        <div class="container">
+          <div class="qa-content"><b>Q2</b>
+            <p>今天想約誰一起逛街呢？</p>
+          </div>
+          <div class="topic-bg1"></div>
+          <div class="topic-bg2"></div><img class="topic-item-1" src="img/topic/2/ppl.png"><img class="topic-item-2" src="img/topic/2/hand.png"><img class="topic-item-3" src="img/topic/2/phone.png">
+          <div class="topic-radio">
+            <input id="issue2-1" type="radio" value="3" v-model="test2">
+            <label for="issue2-1">當然是另一半 ></label>
+            <input id="issue2-2" type="radio" value="2" v-model="test2">
+            <label for="issue2-2">最愛和閨密掃貨 ></label>
+            <input id="issue2-3" type="radio" value="1" v-model="test2">
+            <label for="issue2-3">自己逛最輕鬆 ></label>
+          </div>
+        </div>
+      </section>
+      <section class="topic3" id="section-topic">
+        <div class="container">
+          <div class="qa-content"><b>Q3</b>
+            <p>男友對逛街提不起勁，這時和他在百貨約會的妳會怎麼做？</p>
+          </div>
+          <div class="topic-bg1"></div>
+          <div class="topic-bg2"></div>
+          <div class="topic-item-1">
+            <div class="item-box">
+              <div class="smoke"><img src="img/topic/3/smoke.png"></div><img class="topic-img-1" src="img/topic/3/pic01.png">
+            </div>
+          </div>
+          <div class="topic-item-2">
+            <div class="item-box"><img src="img/topic/3/ppl.png"></div><img class="topic-img-1" src="img/topic/3/pic02.png">
+          </div>
+          <div class="topic-radio">
+            <input id="issue3-1" type="radio" value="0" v-model="test3">
+            <label for="issue3-1">讓他去喝杯咖啡邊等 ></label>
+            <input id="issue3-2" type="radio" value="0" v-model="test3">
+            <label for="issue3-2">不行！一定要一起逛 ></label>
+            <input id="issue3-3" type="radio" value="0" v-model="test3">
+            <label for="issue3-3">分開逛等等再會合 ></label>
+          </div>
+        </div>
+      </section>
+      <section class="topic4" id="section-topic">
+        <div class="container">
+          <div class="qa-content"><b>Q4</b>
+            <p>這個夏天妳最想添購哪樣單品？</p>
+            <div class="bab-box">
+              <div class="bab-content"><img class="topic-item-1" src="img/topic/4/sbline.png"><img class="topic-item-2" src="img/topic/4/sbicon.png"></div>
+            </div>
+          </div><img class="topic-bg1" src="img/topic/4/block01.png"><img class="topic-bg2" src="img/topic/4/block02.png"><img class="topic-item-3" src="img/topic/4/ppl.png"><img class="topic-item-4" src="img/topic/4/donuts.png">
+          <div class="topic-radio">
+            <input id="issue4-1" type="radio" value="4" v-model="test4">
+            <label for="issue4-1">印花長洋裝 ></label>
+            <input id="issue4-2" type="radio" value="3" v-model="test4">
+            <label for="issue4-2">度假風竹編手提包 ></label>
+            <input id="issue4-3" type="radio" value="2" v-model="test4">
+            <label for="issue4-3">印花長洋裝 ></label>
+            <input id="issue4-4" type="radio" value="1" v-model="test4">
+            <label for="issue4-4">一定要買比基尼 ></label>
+          </div>
+        </div>
+      </section>
+      <section class="topic5" id="section-topic">
+        <div class="container">
+          <div class="qa-content"><b>Q5</b>
+            <p>剛好路過最近超紅的美食，要不要排隊品嚐看看呀？</p>
+          </div><img class="topic-item-1" src="img/topic/5/light.gif">
+          <div class="topic-radio">
+            <input id="issue5-1" type="radio" value="2" v-model="test5">
+            <label for="issue5-1">為了美食我排! ></label>
+            <input id="issue5-2" type="radio" value="1" v-model="test5">
+            <label for="issue5-2">不想排隊 ></label>
+          </div>
+        </div>
+      </section>
+      <section class="topic6" id="section-topic">
+        <div class="container">
+          <div class="qa-content"><b>Q6</b>
+            <p>剛好路過最近超紅的美食，要不要排隊品嚐看看呀？</p>
+          </div><img class="topic-item-1" src="img/topic/6/food.png"><img class="topic-item-2" src="img/topic/6/table.png"><img class="item-light-1" src="img/topic/1/light.png"><img class="item-light-2" src="img/topic/1/light.png"><img class="item-light-3" src="img/topic/1/light.png"><img class="item-light-4" src="img/topic/1/light.png"><img class="item-light-5" src="img/topic/1/light.png">
+          <div class="topic-radio">
+            <input id="issue6-1" type="radio" value="0" v-model="test6">
+            <label for="issue6-1">舒芙蕾鬆餅! ></label>
+            <input id="issue6-2" type="radio" value="0" v-model="test6">
+            <label for="issue6-2">草莓蛋糕 ></label>
+            <input id="issue6-3" type="radio" value="0" v-model="test6">
+            <label for="issue6-3">手工餅乾! ></label>
+            <input id="issue6-4" type="radio" value="0" v-model="test6">
+            <label for="issue6-4">珍珠冰淇淋 ></label>
+          </div>
+        </div>
+      </section>
+      <section id="section-resule">
+        <div class="resule resule-1">
           <div class="container"> 
             <div class="content">
               <div class="left-content">
@@ -143,27 +224,27 @@
             <div class="share-text">[分享妳的測驗結果，就有機會領取atré限量贈禮]</div>
           </div>
         </div>
-        <div class="resule resule-3">
+        <div class="resule resule-2">
           <div class="container"> 
             <div class="content">
               <div class="left-content">
-                <div class="slogan">文藝的、下町的，<br>怎麼逛都逛不膩。</div><img class="slogan-img" src="img/result/end-3.jpg">
+                <div class="slogan">充滿活力，<br>自在散策的地方。</div><img class="slogan-img" src="img/result/end-1.jpg">
                 <ul>
-                  <li><span>喜愛復古懷舊老物，但對古著就<br>沒那麼愛</span> </li>
-                  <li> <span>逛展聽現場演出已成生活習慣，<br>逛街則用來累積靈感</span> </li>
-                  <li> <span>基本上不穿有跟的鞋子</span> </li>
-                  <li> <span>比起新潮摩登的咖啡廳，更愛老<br>屋新建的懷舊小店</span> </li>
+                  <li><span>以不過合身的大地色系服飾為主</span> </li>
+                  <li> <span>具品牌忠誠度，喜歡低調展現服<br>飾與自我質感</span> </li>
+                  <li> <span>與其崇拜偶像，更愛搞笑藝人</span> </li>
+                  <li> <span>與其跟流行，自己喜歡更重要</span> </li>
                 </ul>
               </div>
-              <div class="right-content"><img class="edn-p1" src="img/result/ppl3.png"><img class="edn-p2" src="img/result/plant3.png"></div>
+              <div class="right-content"><img class="edn-p1" src="img/result/ppl1.png"><img class="edn-p2" src="img/result/plant1.png"></div>
             </div>
             <div class="brand">
               <h3>推薦品牌：</h3>
               <ul>
-                <li><img src="img/result/brand-3.jpg">
+                <li><img src="img/result/brand-1.jpg">
                   <div class="brand-text">
                     <h4>BEAMS</h4>
-                    <p>輕鬆、隨性的日系休閒，帶您享受時尚樂趣。 </p>
+                    <p>日本人氣品牌，選品視角獨特，風格多樣並持續創新。 </p>
                   </div>
                 </li>
               </ul>
@@ -171,7 +252,7 @@
             <div class="share-text">[分享妳的測驗結果，就有機會領取atré限量贈禮]</div>
           </div>
         </div>
-        <div class="resule resule-4">
+        <div class="resule resule-3">
           <div class="container"> 
             <div class="content">
               <div class="left-content">
@@ -199,8 +280,36 @@
             <div class="share-text">[分享妳的測驗結果，就有機會領取atré限量贈禮]</div>
           </div>
         </div>
-        <div class="button-share"><a class="share-1" href="javascript:;">再測一次 ></a><a class="share-2" href="javascript:;">立即分享 ></a><a class="share-3" href="javascript:;">看最新優惠 ></a></div>
-      </div>
+        <div class="resule resule-4">
+          <div class="container"> 
+            <div class="content">
+              <div class="left-content">
+                <div class="slogan">文藝的、下町的，<br>怎麼逛都逛不膩。</div><img class="slogan-img" src="img/result/end-3.jpg">
+                <ul>
+                  <li><span>喜愛復古懷舊老物，但對古著就<br>沒那麼愛</span> </li>
+                  <li> <span>逛展聽現場演出已成生活習慣，<br>逛街則用來累積靈感</span> </li>
+                  <li> <span>基本上不穿有跟的鞋子</span> </li>
+                  <li> <span>比起新潮摩登的咖啡廳，更愛老<br>屋新建的懷舊小店</span> </li>
+                </ul>
+              </div>
+              <div class="right-content"><img class="edn-p1" src="img/result/ppl3.png"><img class="edn-p2" src="img/result/plant3.png"></div>
+            </div>
+            <div class="brand">
+              <h3>推薦品牌：</h3>
+              <ul>
+                <li><img src="img/result/brand-3.jpg">
+                  <div class="brand-text">
+                    <h4>BEAMS</h4>
+                    <p>輕鬆、隨性的日系休閒，帶您享受時尚樂趣。 </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="share-text">[分享妳的測驗結果，就有機會領取atré限量贈禮]</div>
+          </div>
+        </div>
+        <div class="button-share"><a class="share-1" href="javascript:;" @click="goStep1">再測一次 ></a><a class="share-2" href="javascript:;" @click="fbshare">立即分享 ></a><a class="share-3" href="javascript:;" @click="goNews">看最新優惠 ></a></div>
+      </section>
       <div id="section-rule">
         <div class="bg-1"><span></span><span></span><span></span><span></span><span></span></div>
         <div class="container"><img class="title" src="img/rule/title.png">
@@ -232,23 +341,11 @@
         <div class="container"><img class="title" src="img/news/title.png"><img class="news-img" src="img/news/news_ing.jpg">
           <div class="add">*台北市信義區松智路17號 *週日至週三 11:00 - 21:30 <br>*週四至週六 (含例假日前夕) 11:00 - 22:00 *部分專櫃時間調整</div>
           <ul class="news-list">
-            <li><img src="img/news/logo-1.jpg">
+            <li v-for="(items,index) in newsList" :class="'style-' + (index)"><img :src="items.img">
               <div class="news-text">
-                <h4>coen</h4>
-                <p>輕鬆、隨性的日系休閒，帶您享受時尚樂趣。 </p>
-              </div><a class="btn-more" href="javascript:;" target="_blank">了解更多</a>
-            </li>
-            <li><img src="img/news/logo-2.jpg">
-              <div class="news-text">
-                <h4>niko and...</h4>
-                <p>要兩排字也可以，要三排的話就是高度再變更高，但不建議超過兩行，太多字了~ </p>
-              </div><a class="btn-more" href="javascript:;" target="_blank">了解更多     </a>
-            </li>
-            <li><img src="img/news/logo-1.jpg">
-              <div class="news-text">
-                <h4>coen</h4>
-                <p>輕鬆、隨性的日系休閒，帶您享受時尚樂趣。 </p>
-              </div><a class="btn-more" href="javascript:;" target="_blank">了解更多</a>
+                <h4>{{items.name}}</h4>
+                <p v-html="items.content"></p>
+              </div><a class="btn-more" :href="items.link" target="_blank">了解更多</a>
             </li>
           </ul>
           <div class="news-about">
@@ -257,41 +354,36 @@
                在時尚和流行最前線的東京，擁有多家分店，現已於台灣正式登場！<br>與眾不同的atre 風格，貼近您的日常生活，為生活增添更多閃耀光芒。<br>無論是表達心意的貼心小禮，還是給自己努力一天的犒賞，<br>不妨來atre讓我們為您實現更豐富有趣的精彩生活吧！</p>
           </div>
           <ul class="add-list">
-            <li><img class="add-img" src="img/news/584x251.jpg">
+            <li><img class="add-img" src="img/news/news-img-1.jpg">
               <div class="add-list-text">
                 <h4>atre 恵比寿</h4>
                 <p>以美食著稱也常上榜宜居城市，許多時尚名人都居此。<br>atre惠比壽提供大人系女子時尚享受，美食咖啡無上饗宴。</p>
+                <p class="ne-add">地址：東京都渋谷区恵比寿南1-5-5</p>
               </div>
             </li>
-            <li><img class="add-img" src="img/news/584x251.jpg">
+            <li><img class="add-img" src="img/news/news-img-2.jpg">
               <div class="add-list-text">
                 <h4>atre 吉祥寺</h4>
                 <p>周邊有公園、動物園和咖啡廳等的吉祥寺，是充滿活力與美食的城鎮。<br>走在吉祥寺車站的atre裡，環繞於各式美食與雜貨，<br>就像散步街道般舒適自在。</p>
+                <p class="ne-add">地址：東京都武蔵野市吉祥寺南町1-1-24</p>
               </div>
             </li>
-            <li><img class="add-img" src="img/news/584x251.jpg">
-              <div class="add-list-text">
-                <h4>atre 恵比寿</h4>
-                <p>以美食著稱也常上榜宜居城市，許多時尚名人都居此。<br>atre惠比壽提供大人系女子時尚享受，美食咖啡無上饗宴。</p>
-              </div>
-            </li>
-            <li><img class="add-img" src="img/news/584x251.jpg">
+            <li><img class="add-img" src="img/news/news-img-3.jpg">
               <div class="add-list-text">
                 <h4>atre 品川</h4>
                 <p>品川是日本首屈一指的商業區，職業女性自信跨步街區。<br>atre品川如世界中心紐約般，<br>匯集世界頂級餐廳，提供您菁英般別具一格的饗宴。</p>
+                <p class="ne-add">地址：東京都港区港南2-18-1</p>
               </div>
             </li>
-            <li><img class="add-img" src="img/news/584x251.jpg">
+            <li><img class="add-img" src="img/news/news-img-4.jpg">
               <div class="add-list-text">
                 <h4>atre 上野</h4>
                 <p>來上野，可以安排博物館感受文藝氣氛，接著到阿美橫丁挑選南北貨，<br>最後來atré上野喝杯咖啡或來碗人氣拉麵！<br>逛逛上野，絕不能錯過atre上野。</p>
+                <p class="ne-add">地址：東京都台東区上野7-1-1</p>
               </div>
             </li>
           </ul>
-          <div class="btn-news">
-            <div class="btn">更多品牌介紹 ></div>
-            <div class="btn">關於atre ></div>
-          </div>
+          <div class="btn-news"><a class="btn" href="https://atre.com.tw/floorguide" target="_blank">更多品牌介紹 ></a><a class="btn" href="https://atre.com.tw/about.html" target="_blank">關於atre ></a></div>
         </div>
       </div>
       <div id="section-intor">
@@ -304,11 +396,12 @@
           <div class="gift-time">
             <h3>兌換來店禮及指定期間：</h3><img src="img/intor/gift-photo.png">
           </div>
-          <div class="btn btn-in">我知道了 ></div>
+          <div class="btn btn-in" @click="goStep">我知道了 ></div>
         </div>
       </div>
     </div>
   </body>
   <script src="js/vendors.js"></script>
-  <script src="js/index.js?v=1592970360315"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/index.js?v=1593174999077"></script>
 </html>

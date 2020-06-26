@@ -7,24 +7,32 @@ class Topic6 {
 
   constructor() {
     // console.log('Topic6')
+    $('.topic6 .topic-radio label').click(() => {
+      $('.btn-in').addClass('go-end')
+      $('#section-intor').stop().fadeIn()
+    })
   }
 
   show() {
     // console.log('Rule show')
+    
     const tl = new TimelineMax({
       onComplete: () => {
-        $('#section-topic6').addClass('active')
+        $('.topic6').addClass('active')
         // console.log('Rule show Complete')
       }
     })
-    // TweenMax.to('#section-Topic6', 0.5, {autoAlpha: 0, delay: delay})
+    let dealy = 0
+    TweenMax.to('.topic6', 0.5, {autoAlpha: 1, delay: dealy})
   }
 
   hide() {
     // console.log('Rule hide')
-    $('#section-topic6').removeClass('active')
+    $('.topic6').removeClass('active')
+    $('.btn-in').removeClass('go-end')
+
     let delay = 0
-    TweenMax.to('#section-topic6', 0.5, {
+    TweenMax.to('.topic6', 0.5, {
       autoAlpha: 0, delay: delay, onComplete: () => {
         // TweenMax.set('#section-rule .title-dec', { alpha: 0, y: 30 })
         // TweenMax.set('#section-rule .content-box', { alpha: 0, y: 30 })

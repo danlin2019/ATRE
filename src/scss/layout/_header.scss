@@ -17,7 +17,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    // background: $white;
+    background: $white;
     &.active {
       .title {
         display: block;
@@ -42,12 +42,21 @@ header {
   .title {
     width: 49%;
     max-width: 286px;
-    display: none;
+    // display: none;
   }
 
   &.active {
     .title {
       opacity: 1;
+    }
+  }
+
+  &.no-header{
+    .header-box{
+      background: none;
+    }
+    .title{
+      display: none;
     }
   }
 }

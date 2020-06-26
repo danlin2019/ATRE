@@ -1,7 +1,7 @@
 header
   .header-box(:class="{ active: isActive }")
     .logobox 
-      img.logo(src="img/header/logo.svg")
+      img.logo(src="img/header/logo.svg" @click="goHome")
       img.title(src="img/header/title_text.png")
     .menu-wrapper(@click="menuList")
       .hamburger-menu
@@ -9,17 +9,20 @@ header
     nav
       ul
         li
-          a(href="javascript:;")
+          a(href="javascript:;" @click="goHome")
             img(src="img/header/menu-1.png")
         li
           a(href="javascript:;")
-            img(src="img/header/menu-2.png")
+            img(src="img/header/menu-2.png" @click="goRule")
         li
-          a(href="javascript:;") 
+          a(href="javascript:;" @click="goNews") 
             img(src="img/header/menu-3.png")
         li
           a(href="https://atre.com.tw/" target="_blank") 
             img(src="img/header/menu-4.png")
+        li
+          a(href="https://atre.com.tw/" target="_blank") 
+            img(src="img/header/menu-5.png")
       .link
         a(href="https://www.facebook.com/atre.tw/" target="_blank")
           img(src="img/header/fb-icon.png")

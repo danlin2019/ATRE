@@ -3,8 +3,11 @@ doctype html
 html(lang="zh-tw")
   head
     include ../components/head.pug
-    
   body
+    // Google Tag Manager (noscript)
+    //- noscript
+      //- iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-KB938SL', height='0', width='0', style='display:none;visibility:hidden')
+    // End Google Tag Manager (noscript)
     #wrapper
       include ../components/header.pug
       //- indexinde
@@ -31,4 +34,5 @@ html(lang="zh-tw")
       //- intro
       include ../section/intor.pug
   script(src='js/vendors.js')
+  script(src="https://unpkg.com/axios/dist/axios.min.js")
   script(src='js/index.js?v=' + d)

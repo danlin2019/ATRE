@@ -8,7 +8,10 @@
 // @prepros-prepend ../section/Topic4.js
 // @prepros-prepend ../section/Topic5.js
 // @prepros-prepend ../section/Topic6.js
-// @prepros-prepend ../section/Resule.js
+// @prepros-prepend ../section/Resule1.js
+// @prepros-prepend ../section/Resule2.js
+// @prepros-prepend ../section/Resule3.js
+// @prepros-prepend ../section/Resule4.js
 // @prepros-prepend ../section/development.js
 
 let currSection
@@ -33,11 +36,11 @@ function goto(sectionName) {
       section = new Index()
       sectionPool.push(section)
     }
-
+    $('header').addClass('no-header')
   } else if (sectionName === 'Topic1') {
 
     index = checkSection(Topic1)
-    console.log(Topic1)
+    // console.log(Topic1)
     if (index > -1) {
       section = sectionPool[index]
 
@@ -46,11 +49,11 @@ function goto(sectionName) {
       sectionPool.push(section)
 
     }
-
+    $('header').removeClass('no-header')
   } else if (sectionName === 'Topic2') {
 
     index = checkSection(Topic2)
-    console.log(Topic2)
+    // console.log(Topic2)
     if (index > -1) {
       section = sectionPool[index]
     } else {
@@ -61,7 +64,7 @@ function goto(sectionName) {
 
   } else if (sectionName === 'Topic3') {
     index = checkSection(Topic3)
-    console.log(Topic3)
+    // console.log(Topic3)
     if (index > -1) {
       section = sectionPool[index]
     } else {
@@ -72,7 +75,7 @@ function goto(sectionName) {
   } else if (sectionName === 'Topic4') {
 
     index = checkSection(Topic4)
-    console.log(Topic4)
+    // console.log(Topic4)
     if (index > -1) {
       section = sectionPool[index]
     } else {
@@ -83,7 +86,7 @@ function goto(sectionName) {
   } else if (sectionName === 'Topic5') {
 
     index = checkSection(Topic5)
-    console.log(Topic5)
+    // console.log(Topic5)
     if (index > -1) {
       section = sectionPool[index]
     } else {
@@ -93,29 +96,61 @@ function goto(sectionName) {
   } else if (sectionName === 'Topic6') {
 
     index = checkSection(Topic6)
-    console.log(Topic6)
+    // console.log(Topic6)
     if (index > -1) {
       section = sectionPool[index]
     } else {
       section = new Topic6()
       sectionPool.push(section)
     }
-  } else if (sectionName === 'Resule') {
+  }else if (sectionName === 'Resule1') {
 
-    index = checkSection(Resule)
-    console.log(Resule)
+    index = checkSection(Resule1)
+    // console.log(Resule)
     if (index > -1) {
       section = sectionPool[index]
     } else {
-      section = new Resule()
+      section = new Resule1()
       sectionPool.push(section)
     }
 
-    $('header').addClass('active')
+  } else if (sectionName === 'Resule2') {
+
+    index = checkSection(Resule2)
+    // console.log(Resule)
+    if (index > -1) {
+      section = sectionPool[index]
+    } else {
+      section = new Resule2()
+      sectionPool.push(section)
+    }
+
+  } else if (sectionName === 'Resule3') {
+
+    index = checkSection(Resule3)
+    // console.log(Resule)
+    if (index > -1) {
+      section = sectionPool[index]
+    } else {
+      section = new Resule3()
+      sectionPool.push(section)
+    }
+
+  } else if (sectionName === 'Resule4') {
+
+    index = checkSection(Resule4)
+    // console.log(Resule)
+    if (index > -1) {
+      section = sectionPool[index]
+    } else {
+      section = new Resule4()
+      sectionPool.push(section)
+    }
+
   }
 
-  console.log('section :')
-  console.log(section)
+  // console.log('section :')
+  // console.log(section)
   section.show()
   currSection = section
 }
@@ -123,7 +158,7 @@ function goto(sectionName) {
 function checkSection(_class) {
 
   for (let i = 0; i < sectionPool.length; i++) {
-    console.log(sectionPool[i] instanceof _class)
+    // console.log(sectionPool[i] instanceof _class)
     if (sectionPool[i] instanceof _class) {
       return i
     }
@@ -135,10 +170,8 @@ function checkSection(_class) {
 if (location.hostname === 'localhost') {
   goto('Index')
 } else {
-  goto('Resule')
-}
-
-
-$('.btn-in').on('click', () => {
   goto('Index')
-})
+}
+if (isMobile.apple.phone || isMobile.android.phone) {
+  $('#wrapper').addClass('isMobile')
+}

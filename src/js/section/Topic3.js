@@ -1,30 +1,35 @@
 /**
  * ------------------------------------------------------------------------
- * Topic3
+ * Topic1
  * ------------------------------------------------------------------------
  */
 class Topic3 {
 
   constructor() {
     // console.log('Topic3')
+    $('.topic3 .topic-radio label').click(() => {
+      goto('Topic4')
+    })
   }
 
   show() {
     // console.log('Rule show')
+    
     const tl = new TimelineMax({
       onComplete: () => {
-        $('#section-topic3').addClass('active')
+        $('.topic3').addClass('active')
         // console.log('Rule show Complete')
       }
     })
-    // TweenMax.to('#section-Topic3', 0.5, {autoAlpha: 0, delay: delay})
+    let dealy = 0
+    TweenMax.to('.topic3', 0.5, {autoAlpha: 1, delay: dealy})
   }
 
   hide() {
     // console.log('Rule hide')
-    $('#section-topic3').removeClass('active')
+    $('.topic3').removeClass('active')
     let delay = 0
-    TweenMax.to('#section-topic3', 0.5, {
+    TweenMax.to('.topic3', 0.5, {
       autoAlpha: 0, delay: delay, onComplete: () => {
         // TweenMax.set('#section-rule .title-dec', { alpha: 0, y: 30 })
         // TweenMax.set('#section-rule .content-box', { alpha: 0, y: 30 })

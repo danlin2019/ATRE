@@ -1,5 +1,4 @@
 #section-news {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +6,8 @@
   max-width: 640px;
   height: 100%;
   z-index: 9;
-  background: rgba(#fff, 1);
+    background:none;
+
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;

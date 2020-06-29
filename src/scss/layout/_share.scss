@@ -96,7 +96,10 @@ body {
 
 #section-index,
 #section-topic,
-#section-resule{
+#section-resule,
+#section-news,
+#section-rule
+{
   position: absolute;
   top: 0;
   left: 0;
@@ -113,5 +116,8 @@ body {
   &.active {
     pointer-events: auto;
     
+  }
+  &.no-bg{
+    background:none;
   }
 }

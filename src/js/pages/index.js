@@ -2,6 +2,7 @@
 // @prepros-prepend ../section/rule.js
 // @prepros-prepend ../section/intor.js
 // @prepros-prepend ../section/Index.js
+// @prepros-prepend ../section/Slider.js
 // @prepros-prepend ../section/Topic1.js
 // @prepros-prepend ../section/Topic2.js
 // @prepros-prepend ../section/Topic3.js
@@ -36,7 +37,37 @@ function goto(sectionName) {
       section = new Index()
       sectionPool.push(section)
     }
+
     $('header').addClass('no-header')
+    $('.bg-1').removeClass('active')
+  } else if (sectionName === 'Rule') {
+
+    index = checkSection(Rule)
+    // console.log(Rule)
+    if (index > -1) {
+      section = sectionPool[index]
+
+    } else {
+      section = new Rule()
+      sectionPool.push(section)
+
+    }
+
+    $('header').removeClass('no-header')
+  } else if (sectionName === 'News') {
+
+    index = checkSection(News)
+    // console.log(News)
+    if (index > -1) {
+      section = sectionPool[index]
+
+    } else {
+      section = new News()
+      sectionPool.push(section)
+
+    }
+
+    $('header').removeClass('no-header')
   } else if (sectionName === 'Topic1') {
 
     index = checkSection(Topic1)
@@ -168,7 +199,7 @@ function checkSection(_class) {
 
 
 if (location.hostname === 'localhost') {
-  goto('Index')
+  goto('Resule3')
 } else {
   goto('Index')
 }

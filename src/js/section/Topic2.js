@@ -17,12 +17,16 @@ class Topic2 {
     
     const tl = new TimelineMax({
       onComplete: () => {
-        $('.topic2').addClass('active')
         // console.log('Rule show Complete')
       }
     })
+    $('.topic2').addClass('active')
     let dealy = 0
     TweenMax.to('.topic2', 0.5, {autoAlpha: 1, delay: dealy})
+    tl.fromTo('.topic2 .topic-bg1',0.8,{opacity: 0, x: 100},{opacity: 1 ,x:0, ease: Power2.easeOut},0.5)
+    tl.fromTo('.topic2 .topic-bg2',0.8,{opacity: 0, x: -100},{opacity: 1 ,x:0, ease: Power2.easeOut},0.5 )
+    tl.fromTo('.topic2 .topic-item-1-box',1,{opacity: 0},{opacity: 1, ease: Power2.easeOut},1.1)
+
   }
 
   hide() {
@@ -31,9 +35,9 @@ class Topic2 {
     let delay = 0
     TweenMax.to('.topic2', 0.5, {
       autoAlpha: 0, delay: delay, onComplete: () => {
-        // TweenMax.set('#section-rule .title-dec', { alpha: 0, y: 30 })
-        // TweenMax.set('#section-rule .content-box', { alpha: 0, y: 30 })
-        // TweenMax.set('#section-rule .rule-btn', { alpha: 0, y: 30 })
+        TweenMax.set('.topic2 .topic-bg1', { opacity: 0, x: -100 })
+        TweenMax.set('.topic2 .topic-bg2', { opacity: 0, x: 100 })
+        TweenMax.set('topic-item-1-box', {opacity: 0 })
       }
     })
   }

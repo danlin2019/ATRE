@@ -41,10 +41,10 @@ var wrapper = new Vue({
         const q6 = Number(this.test6)
         this.num = q1 + q2 + q3 + q4 + q5 + q6
         this.numtotal = this.num
-        console.log('this.num')
-        console.log(this.num)
-        console.log('this.numtotal')
-        console.log(this.numtotal)
+        // console.log('this.num')
+        // console.log(this.num)
+        // console.log('this.numtotal')
+        // console.log(this.numtotal)
         // 判斷狀態
         let num = null
         // https://ithelp.ithome.com.tw/articles/10210319      
@@ -62,7 +62,7 @@ var wrapper = new Vue({
           num = 1
         } 
         this.fbShare = num
-        console.log(num)
+        // console.log(num)
         goto(`Resule${num}`)
       }
     },
@@ -81,62 +81,57 @@ var wrapper = new Vue({
       this.num = ''
     },
     goHome() {
-      
+      $('.hamburger-menu').removeClass('animate')
         $('#section-intor').stop().fadeOut()
         this.isActive = false
         $('.nav-box').stop().fadeOut(0)
-        $('#section-rule').stop().fadeOut(0)
-        $('#section-news').stop().fadeOut(0)
+      $('.header-box').css('background-color','')
+
         goto('Index')
         this.data =''
         this.userName =''     
         this.fbShare = ''
         this.numtotal = ''
         this.num = ''    
-  
-      // if($('#section-intor').hasClass('open')) {
-      //   $('#section-intor').stop().fadeOut()        
-      // }
-    },
-    goHome2() {
-      $('#section-intor').stop().fadeOut()
-      this.isActive = false
-      $('.nav-box').stop().fadeOut(0)
-      $('#section-rule').stop().fadeOut(0)
-      $('#section-news').stop().fadeOut(0)
-      goto('Index')
-      this.data =''
-      this.userName =''     
-      this.fbShare = ''
-      this.numtotal = ''
-      this.num = ''
     },
     goNews() {
       this.isActive = false
-      $('header').removeClass('no-header')
-      $('#section-news').stop().fadeIn()
-      $('#section-rule').stop().fadeOut()
+      goto('News')
+      $('.hamburger-menu').removeClass('animate')
       $('.nav-box').stop().fadeOut()
+      $('.header-box').css('background-color','#ffffff')
+      $('.nav-box li').removeClass('active')
+      $('.nav-box li:eq(1)').addClass('active')
+       $('.bg-1').addClass('active')
     },
     goRule() {
       this.isActive = false
-      $('header').removeClass('no-header')
-      $('#section-rule').stop().fadeIn()
-      $('#section-news').stop().fadeOut()
+      goto('Rule')
+      $('.hamburger-menu').removeClass('animate')
       $('.nav-box').stop().fadeOut()
+      $('.header-box').css('background-color','#ffffff')
+       $('.bg-1').addClass('active')
     },
     // 選單
     menuList() {
-      console.log(0)
+      
+      // console.log(0)
       this.isActive = !this.isActive
       if (this.isActive) {
-        $('header').removeClass('no-header')
+        $('.hamburger-menu').addClass('animate')
+        // $('header').removeClass('no-header')
         $('.nav-box').stop().fadeIn()
+        
       } else {
         if($('#section-index').hasClass('active')) {
-          $('header').addClass('no-header')
+          // $('header').addClass('no-header')
+          $('.nav-box').stop().fadeOut()
+          $('.hamburger-menu').removeClass('animate')
+          $('.header-box').css('background-color','')
         }
+        $('.hamburger-menu').removeClass('animate')
         $('.nav-box').stop().fadeOut()
+        
       }
     }
   },
@@ -145,15 +140,22 @@ var wrapper = new Vue({
       .get('api/newsList1.json')
       .then((response) => {
         this.newsList = response.data
-        console.log(this.newsList)
+        // console.log(this.newsList)
         this.newsList.forEach((e) => {
           e.content = e.content.replace(/\n/g, '<br />')
         });
       })
-      .catch(function (error) { // 请求失败处理
+      .catch(function (error) { 
         // console.log(error);
       });
   }
 })
-
+// $('.nav-box li:eq(0)').addClass('active')
+var str = ""
+$('.nav-box li').on('click',function(){
+  str = $(this).index()
+  // console.log(str)
+  $('.nav-box li').removeClass('active')
+  $('.nav-box li:eq('+str+')').addClass('active')
+})
 

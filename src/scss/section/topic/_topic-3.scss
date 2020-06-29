@@ -30,10 +30,16 @@
     width: 73%;
     max-width: 467px;
     margin: 0 0% 0% 0%;
-    z-index: 3;
+    z-index: 1;
     top: 31%;
     .topic-img-1{
       width: 100%;
+    }
+    @include screen(1336px) {
+      width: 54%;
+    }
+    @include screen(640px) {
+     width: 73%;
     }
   }
   .item-box{
@@ -42,15 +48,63 @@
   }
   .smoke{
     position: absolute;
-    bottom: 15%;
+    bottom: 13%;
     left: 50%;
+    img{
+      transition: .4s;
+      top: 0;
+      opacity: 0;
+      filter: blur(13px);
+      position: relative;
+    }
   }
+  &.active{
+    .smoke:nth-child(1) img{
+      animation: smoke 5s 1.7s infinite;
+    }
+    .smoke:nth-child(2){
+      bottom: 13%;
+      left: 47%;
+      img{
+        animation: smoke 6s 3s infinite;
+      }
+    } 
+  
+    .smoke:nth-child(3){
+      bottom: 14%;
+      left: 48%;
+      img{
+        animation: smoke 8s 4s infinite;
+      }
+    }
+  }
+ 
+
   .topic-item-2{
-    bottom: 19%;
+    width:72%;
+    bottom: 18%;
     right: 0%;
     overflow: hidden;
+    z-index: 2;
     .item-box{
       position: absolute;
+      height: 0;
+      padding-bottom: 40.4%;
+      overflow: hidden;
+      img{
+        animation: lr 6s 0s infinite;
+
+      }
+    }
+    .topic-img-1{
+      width:100%;
+    }
+    // @include screen(1336px) {
+    //   width: 61%;
+    // }
+    @include screen(640px) {
+     bottom: 16%;
+     width:83%;
     }
   }
   @include screen(640px) {
@@ -58,8 +112,114 @@
   .topic-item-3{
     margin-right: 5%;
   }
+  .topic-item-2 .item-box img{
+    width:106%;
   }
+  .topic-bg2{
+    bottom: 11.5%;
+  }
+  .topic-radio label{
+    width: 47% !important;
+    font-size: 3.8vw!important;
+  }  
+   .topic-box {
+    width: 100%;
+    top: 0%;
+  }
+  }
+ 
+}
+@include screen(640px) {
+
 }
 
 
+// 11 pro 11 pro max  x
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+  .isMobile .topic3 .topic-box {
+    width: 102%;
+    top: 0%;
+  }
+  .isMobile .topic3 .topic-item-2 {
+    bottom: 19%;
+  
+  }
 
+}
+// 11 
+@media only screen 
+and (device-width : 414px) 
+and (device-height : 896px) 
+and (-webkit-device-pixel-ratio : 2) { 
+  .isMobile .topic3 .topic-box {
+    width: 102%;
+    top: 0%;
+  }
+  .isMobile .topic3 .topic-item-2 {
+    bottom: 19%;
+  
+  }
+}
+/* 8+ 7+ 6+ */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .isMobile .topic3 .topic-box {
+      width: 100%;
+      top: 3%;
+    }
+    .isMobile .topic3 .topic-item-2 {
+      bottom: 18%;
+    
+    }
+    .isMobile #section-topic.topic3 .topic-radio {
+      bottom: 1.4%;
+   }
+   .isMobile .topic3 .topic-bg2 {
+    bottom: 9%;
+   }
+   .isMobile .topic3 .topic-item-1 {
+    width: 65%;
+  }
+  .isMobile .topic3 .topic-item-2 {
+
+    width: 74%;
+  }
+  .isMobile .topic3 .topic-bg1 {
+    top: 45%;
+    left: 0;
+  }
+}
+/* 8 7 6 */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2) {
+    .isMobile .topic3 .topic-box {
+      width: 100%;
+      top: 3%;
+    }
+    .isMobile .topic3 .topic-item-2 {
+      bottom: 18%;
+    
+    }
+    .isMobile #section-topic.topic3 .topic-radio {
+      bottom: 1.4%;
+   }
+   .isMobile .topic3 .topic-bg2 {
+    bottom: 9%;
+   }
+   .isMobile .topic3 .topic-item-1 {
+    width: 63%;
+  }
+  .isMobile .topic3 .topic-item-2 {
+
+    width: 74%;
+  }
+  .isMobile .topic3 .topic-bg1 {
+    top: 45%;
+    left: 0;
+  }
+}

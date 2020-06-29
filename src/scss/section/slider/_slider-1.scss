@@ -59,13 +59,20 @@
     .slogan{
       position: absolute;
       top: 0;
+      top: 28%;
       left: 0;
       width: 35%;
       max-width: 217px;
       margin: 32% 0 0 57%;
+      margin: 0 0 0 57%;
+     width: calc(217 / 960 * 100vh);
     }
   }
   @include screen(640px) {
+    .slider-img .slogan{
+      width: 31%;
+      margin: 0 0 0 61%;
+    }
     .bg span:nth-child(1){
       margin-top: 5%;
     }
@@ -82,10 +89,7 @@
       margin-bottom: 50%;
       // width: 23.938%;      
     }
-    .slider-img .slogan{
-      width: 31%;
-      margin: 32% 0 0 59%;
-    }
+
   }
 }
 

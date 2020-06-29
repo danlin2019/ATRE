@@ -17,6 +17,7 @@
     height: 30.483%;
 
     @include screen(640px) {
+      top: 41.2%;
       height: 20.483%;
     }
   }
@@ -28,15 +29,23 @@
     height: 20.24%;
 
     @include screen(640px) {
-      height: 25%;
+      bottom: 15%;
+      height: 15.5%;
     }
   }
 
   .topic-item-1 {
     width: 38%;
     max-width: 239px;
-    margin: 35% 0% 0% 1%;
+    margin: 35% 0% 0% 0%;
     z-index: 1;
+    width: calc(239 / 920 * 100vh);
+    @include screen(640px) {
+      width: 38%;
+    }
+    // @include screen(360px) {
+    //   margin-top:41%;
+    // }
   }
 
   .topic-item-2 {
@@ -44,6 +53,13 @@
     max-width: 386px;
     margin: 50.9% 0% 0% 2.3%;
     z-index: 2;
+    width: calc(386 / 920 * 100vh);
+    @include screen(640px) {
+      width: 61%;
+    }
+    // @include screen(360px) {
+    //   margin-top:56.9% ;
+    // }
   }
 
   .topic-item-3 {
@@ -51,6 +67,14 @@
     max-width: 163px;
     right: 0;
     margin: 45.3% 6% 0% 0%;
+    width: calc(163 / 920 * 100vh);
+    @include screen(640px) {
+      width: 23%;
+      margin: 43.3% 12% 0% 0%;
+    }
+    // @include screen(360px) {
+    //   margin-top:54.3% ;
+    // }
   }
 
   .topic-item-4 {
@@ -58,6 +82,11 @@
     max-width: 205px;
     right: 0;
     margin: 82.2% 17.2% 0% 0%;
+    width: calc(205 / 920 * 100vh);
+
+    // @include screen(360px) {
+    //      margin: 93.2% 17.2% 0% 0%;
+    // }
   }
 
   .topic-item-5 {
@@ -65,6 +94,14 @@
     max-width: 82px;
     margin: 92.6% 0 0% 29.4%;
     z-index: 3;
+    width: calc(82 / 920 * 100vh);
+    @include screen(640px) {
+      width: 11%;
+      margin: 88.5% 0 0% 26.4%;
+    }
+    //  @include screen(360px) {
+    //    margin: 102.6% 0 0% 29.4%;
+    // }
   }
 
   .item-light-1 {
@@ -73,8 +110,12 @@
     right: 0;
     margin-top: 59%;
     margin-right: -1%;
-
     z-index: 4;
+    @include screen(640px) {
+      margin-top: 54%;
+      margin-right: 5%;
+    }
+
   }
 
   .item-light-2 {
@@ -84,17 +125,36 @@
     margin-top: 80%;
     margin-right: 27%;
     z-index: 4;
-  }
+    @include screen(640px) {
+      margin-top: 72%;
+      margin-right: 36%;
+    }
 
+  }
+  &.active{
+    .item-light-1 {
+      animation: item-light 2s 2s infinite;
+    }
+    .item-light-2 {
+      animation: item-light 2s 2.5s infinite;
+    }
+  }
   @include screen(360px) {
     .container {
       top: 65 !important;
     }
   }
 
-  @media only screen and (min-device-width : 375px) and (min-device-height : 812px) {
-    .container {
-      top: 4%;
+  @include screen(640px) {
+    .topic-item-2{
+      width: 51%;
+      margin: 51.9% 0% 0% 4%;
     }
+    .topic-item-4{
+      width: 30%;
+      margin: 76.5% 24.2% 0% 0%;
+    }
+
   }
+
 }

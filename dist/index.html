@@ -10,23 +10,36 @@
     <!-- SEO-->
     <meta name="title" content="Atre東京女子圖鑑風格發現＿測看看妳是哪種東京風格？">
     <meta name="description" content="分享妳的「東京女子圖鑑風格發現」測驗結果，即可獲得來店禮！">
-    <meta name="keywords" content="JWT">
+    <meta name="keywords" content="Arte">
     <!-- facebook-->
     <meta property="og:title" content="Atre東京女子圖鑑風格發現＿測看看妳是哪種東京風格？">
     <meta property="og:description" content="分享妳的「東京女子圖鑑風格發現」測驗結果，即可獲得來店禮！">
     <meta property="og:image" content="">
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="JWT">
+    <meta property="og:site_name" content="Arte">
     <!-- favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href=" ">
-    <link rel="icon" type="image/x-icon" href=" ">
-    <link rel="stylesheet" href="css/main.css?v=1593174999077">
+    <link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/main.css?v=1593370091713">
     <!-- Google Tag Manager-->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KB938SL');
+    </script>
+    <!-- End Google Tag Manager-->
   </head>
   <body>
     <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB938SL" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript)-->
+    <div class="in-bg"></div>
+    <div class="bg-1"><span></span><span></span><span></span><span></span><span></span></div>
     <div id="wrapper">
       <header>
         <div class="header-box" :class="{ active: isActive }">
@@ -39,8 +52,8 @@
           <nav>
             <ul>
               <li><a href="javascript:;" @click="goHome"><img src="img/header/menu-1.png"></a></li>
-              <li><a href="javascript:;"><img src="img/header/menu-2.png" @click="goRule"></a></li>
-              <li><a href="javascript:;" @click="goNews"> <img src="img/header/menu-3.png"></a></li>
+              <li><a href="javascript:;"><img src="img/header/menu-2.png" @click="goNews"></a></li>
+              <li><a href="javascript:;" @click="goRule"> <img src="img/header/menu-3.png"></a></li>
               <li><a href="https://atre.com.tw/" target="_blank"> <img src="img/header/menu-4.png"></a></li>
               <li><a href="https://atre.com.tw/" target="_blank"> <img src="img/header/menu-5.png"></a></li>
             </ul>
@@ -48,7 +61,7 @@
           </nav>
         </div>
       </header>
-      <section id="section-index"><img class="title" src="img/index/title.png">
+      <section id="section-index">
         <div class="container"> 
           <div class="input-box">
             <div class="input-container"> 
@@ -59,7 +72,7 @@
             </div>
           </div>
           <div class="slider-box">
-            <div class="slider slider-1">
+            <div class="slider slider-1"><img class="title" src="img/index/title.png">
               <div class="bg"><span></span><span></span><span></span><span></span><span></span><span></span></div>
               <div class="slider-img"><img class="slogan" src="img/index/slogan-1.png"><img class="person" src="img/index/banner-1.png"></div>
             </div>
@@ -83,8 +96,10 @@
           <div class="qa-content"><b>Q1</b>
             <p>Hi,<span>{{userName}} </span>您好～<br>週末決定到百貨公司悠閒逛逛～<br>妳的裝扮重點會放在...？</p>
           </div>
-          <div class="topic-bg1"></div>
-          <div class="topic-bg2"></div><img class="topic-item-1" src="img/topic/1/smell.png"><img class="topic-item-2" src="img/topic/1/bag.png"><img class="topic-item-3" src="img/topic/1/earing.png"><img class="topic-item-4" src="img/topic/1/shoes.png"><img class="topic-item-5" src="img/topic/1/lipstick.png"><img class="item-light-1" src="img/topic/1/light.png"><img class="item-light-2" src="img/topic/1/light.png">
+          <div class="topic-box">  
+            <div class="topic-bg1"></div>
+            <div class="topic-bg2"></div><img class="topic-item-1" src="img/topic/1/smell.png"><img class="topic-item-2" src="img/topic/1/bag.png"><img class="topic-item-3" src="img/topic/1/earing.png"><img class="topic-item-4" src="img/topic/1/shoes.png"><img class="topic-item-5" src="img/topic/1/lipstick.png"><img class="item-light-1" src="img/topic/1/light.png"><img class="item-light-2" src="img/topic/1/light.png">
+          </div>
           <div class="topic-radio">
             <input id="issue1-1" type="radio" value="4" v-model="test1">
             <label for="issue1-1">黃色笑臉包 ></label>
@@ -102,8 +117,13 @@
           <div class="qa-content"><b>Q2</b>
             <p>今天想約誰一起逛街呢？</p>
           </div>
-          <div class="topic-bg1"></div>
-          <div class="topic-bg2"></div><img class="topic-item-1" src="img/topic/2/ppl.png"><img class="topic-item-2" src="img/topic/2/hand.png"><img class="topic-item-3" src="img/topic/2/phone.png">
+          <div class="topic-box">  
+            <div class="topic-bg1"></div>
+            <div class="topic-bg2"></div>
+            <div class="topic-item-1-box">
+              <div class="topic-item-1-content"><img class="topic-item-2" src="img/topic/2/hand.png"><img class="topic-item-3" src="img/topic/2/phone.png"></div><img class="topic-item-1" src="img/topic/2/ppl.png">
+            </div>
+          </div>
           <div class="topic-radio">
             <input id="issue2-1" type="radio" value="3" v-model="test2">
             <label for="issue2-1">當然是另一半 ></label>
@@ -119,15 +139,19 @@
           <div class="qa-content"><b>Q3</b>
             <p>男友對逛街提不起勁，這時和他在百貨約會的妳會怎麼做？</p>
           </div>
-          <div class="topic-bg1"></div>
-          <div class="topic-bg2"></div>
-          <div class="topic-item-1">
-            <div class="item-box">
-              <div class="smoke"><img src="img/topic/3/smoke.png"></div><img class="topic-img-1" src="img/topic/3/pic01.png">
+          <div class="topic-box">   
+            <div class="topic-bg1"></div>
+            <div class="topic-bg2"></div>
+            <div class="topic-item-1">
+              <div class="item-box">
+                <div class="smoke"><img src="img/topic/3/smoke.png"></div>
+                <div class="smoke"><img src="img/topic/3/smoke.png"></div>
+                <div class="smoke"><img src="img/topic/3/smoke.png"></div><img class="topic-img-1" src="img/topic/3/pic01.png">
+              </div>
             </div>
-          </div>
-          <div class="topic-item-2">
-            <div class="item-box"><img src="img/topic/3/ppl.png"></div><img class="topic-img-1" src="img/topic/3/pic02.png">
+            <div class="topic-item-2">
+              <div class="item-box"><img src="img/topic/3/ppl.png"></div><img class="topic-img-1" src="img/topic/3/pic02.png">
+            </div>
           </div>
           <div class="topic-radio">
             <input id="issue3-1" type="radio" value="0" v-model="test3">
@@ -163,7 +187,8 @@
         <div class="container">
           <div class="qa-content"><b>Q5</b>
             <p>剛好路過最近超紅的美食，要不要排隊品嚐看看呀？</p>
-          </div><img class="topic-item-1" src="img/topic/5/light.gif">
+          </div>
+          <div class="topic5-box"><img class="topic-item-movie topic-item-1" src="img/topic/5/light-1.png"><img class="topic-item-movie topic-item-2" src="img/topic/5/light-2.png"><img class="topic-item-movie topic-item-3" src="img/topic/5/light-3.png"></div>
           <div class="topic-radio">
             <input id="issue5-1" type="radio" value="2" v-model="test5">
             <label for="issue5-1">為了美食我排! ></label>
@@ -202,7 +227,11 @@
                   <li><span>願意配合男朋友的喜好改變穿著</span> </li>
                 </ul>
               </div>
-              <div class="right-content"><img class="edn-p1" src="img/result/ppl2.png"><img class="edn-p2" src="img/result/plant2.png"></div>
+              <div class="right-content"><img class="edn-p1" src="img/result/ppl2.png">
+                <div class="edn-box">
+                  <div class="edn-p2"><img class="clothes" src="img/result/clothes.png"><img src="img/result/plant2.png"></div>
+                </div>
+              </div>
             </div>
             <div class="brand">
               <h3>推薦品牌：</h3>
@@ -264,7 +293,13 @@
                   <li><span>看懂財務報表沒問題，卻對漫畫閱<br>讀方向沒轍</span> </li>
                 </ul>
               </div>
-              <div class="right-content"><img class="edn-p1" src="img/result/ppl4.png"><img class="edn-p2" src="img/result/plant4.png"></div>
+              <div class="right-content"><img class="edn-p1" src="img/result/ppl4.png">
+                <div class="edn-box">
+                  <div class="edn-p2">
+                    <div class="edn-p2-img"></div><img src="img/result/plant4.png">
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="brand">
               <h3>推薦品牌：</h3>
@@ -311,7 +346,6 @@
         <div class="button-share"><a class="share-1" href="javascript:;" @click="goStep1">再測一次 ></a><a class="share-2" href="javascript:;" @click="fbshare">立即分享 ></a><a class="share-3" href="javascript:;" @click="goNews">看最新優惠 ></a></div>
       </section>
       <div id="section-rule">
-        <div class="bg-1"><span></span><span></span><span></span><span></span><span></span></div>
         <div class="container"><img class="title" src="img/rule/title.png">
           <ul class="rule-list">
             <li> 
@@ -337,7 +371,6 @@
         </div>
       </div>
       <div id="section-news">
-        <div class="bg-1"><span></span><span></span><span></span><span></span><span></span></div>
         <div class="container"><img class="title" src="img/news/title.png"><img class="news-img" src="img/news/news_ing.jpg">
           <div class="add">*台北市信義區松智路17號 *週日至週三 11:00 - 21:30 <br>*週四至週六 (含例假日前夕) 11:00 - 22:00 *部分專櫃時間調整</div>
           <ul class="news-list">
@@ -403,5 +436,5 @@
   </body>
   <script src="js/vendors.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="js/index.js?v=1593174999077"></script>
+  <script src="js/index.js?v=1593370091713"></script>
 </html>

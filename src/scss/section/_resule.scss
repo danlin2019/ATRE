@@ -1,8 +1,11 @@
-#section-resule{
+#section-resule {
   // background: url(../img/guide/03-1.png) top left no-repeat;
   // background-size: cover;
   padding-top: 19.7%;
-  .slogan{
+  @include screen(1440px) {
+    overflow:auto;
+  }
+  .slogan {
     font-size: 20px;
     font-weight: bold;
     line-height: 1.8;
@@ -11,31 +14,40 @@
     color: #515151;
     padding: 0% 0 0 9%;
     margin-bottom: 3%;
+    @include screen(1440px) {
+      font-size: 18px;
+    }
   }
-  .slogan-img{
+
+  .slogan-img {
     display: block;
     width: 100%;
     max-width: 308px;
     margin-bottom: 12%;
   }
-  .content{
+
+  .content {
     width: 100%;
     display: flex;
   }
-  .left-content{
+
+  .left-content {
     width: 50%;
-    ul{
-      width:100%;
+
+    ul {
+      width: 100%;
       font-size: 18px;
       line-height: 1.56;
       color: #5c5c5c;
       padding-left: 8%;
       letter-spacing: 0;
     }
-    li{
+
+    li {
       display: flex;
       margin-bottom: 3%;
-      &::before{
+
+      &::before {
         display: block;
         content: '';
         width: 9px;
@@ -46,63 +58,80 @@
         position: relative;
         top: 10px;
       }
-      span{
+
+      span {
         width: 99%;
       }
     }
   }
-  .right-content{
+
+  .right-content {
     position: relative;
     width: 50%;
-    .edn-p1,.edn-p2{
+
+    .edn-p1,
+    .edn-p2 {
       position: absolute;
     }
-    .edn-p1{
+
+    .edn-p1 {
       left: -21%;
       top: -1%;
       z-index: 1;
       max-width: 303px;
       width: 95%;
     }
-    .edn-p2{
-      right: 0;
+
+    .edn-p2 {
+      right: -1%;
       top: 13%;
       max-width: 196px;
       width: 62%;
+      
+      
     }
   }
-  .brand{
+
+  .brand {
     margin: 6% 0 4.2% 0;
     padding: 7% 0% 9% 4%;
     font-size: 18px;
 
     line-height: 1.44;
-    h3{
+
+    h3 {
       font-weight: bold;
       letter-spacing: 3.6px;
       margin-bottom: 3%;
     }
-    h4,p{
+
+    h4,
+    p {
       letter-spacing: 0;
     }
-    p{
+
+    p {
       line-height: 1.39;
       color: #5c5c5c;
     }
-    li{
+
+    li {
       display: flex;
       list-style: none;
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin-bottom: 4%;
       }
-      img{
+
+      img {
         max-width: 70px;
         width: 12%;
         margin-right: 3%;
       }
     }
   }
-  .share-text{
+
+  .share-text {
     font-size: 22.5px;
     font-weight: bold;
     line-height: 1.38;
@@ -110,13 +139,15 @@
     text-align: center;
     margin-bottom: 1.5%;
   }
-  .button-share{
+
+  .button-share {
     width: 100%;
     max-width: 640px;
     display: flex;
     position: fixed;
     bottom: 0;
-    a{
+    z-index: 2;
+    a {
       text-align: center;
       display: block;
       width: $width / 3;
@@ -128,175 +159,400 @@
       letter-spacing: 4.8px;
       color: #ffffff;
       text-decoration: none;
-      &:nth-child(1),&:nth-child(2){
+
+      &:nth-child(1),
+      &:nth-child(2) {
         border-right: 1px solid #fff;
       }
-      &:nth-child(1),&:nth-child(3){
+
+      &:nth-child(1),
+      &:nth-child(3) {
         background-color: #f06cae;
       }
-      &:nth-child(2){
+
+      &:nth-child(2) {
         background-color: #d72f83;
       }
     }
   }
 
-  .resule-1,.resule-2,.resule-3,.resule-4{
+  .resule-1,
+  .resule-2,
+  .resule-3,
+  .resule-4 {
     position: absolute;
     width: 100%;
     opacity: 0;
     visibility: hidden;
   }
+
   // 1
-  .resule-1{
-    .brand{
+  .resule-1 {
+    .brand {
       background-color: #e2c8f2;
-      h3, h4{
+
+      h3,
+      h4 {
         color: #68308b;
       }
     }
-    .share-text{
+
+    .share-text {
       color: #68308b;
     }
-    .edn-p1{
+
+    .clothes {
+      position: absolute;
+      max-width: 102px;
+      
+    width: 70% !important;
+      top: 0.6%;
+      left: 18%;
+    }
+
+    .edn-p1 {
       left: 0;
       top: -1%;
       max-width: 262px;
       width: 82%;
+
       @include screen(640px) {
         width: 74%;
       }
     }
-    .edn-p2 {
+
+    .edn-box {
+      position: absolute;
+      right: 0;
       top: 13%;
       max-width: 137px;
       width: 43%;
+
       @include screen(640px) {
-        width: 38%;
+        // width: 38%;
       }
     }
-    .brand{
+
+    .edn-p2 {
+      position: relative;
+      width: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .brand {
       padding: 3% 0% 4% 4%;
+      margin: 6% 0 2.2% 0;
+
       @include screen(640px) {
         font-size: 2.6vw;
+        margin: 4% 0 2.2% 0;
+
       }
     }
-    .slogan-img{
+
+    .slogan-img {
       margin-bottom: 8%;
     }
-  }
-  // 2
-  .resule-2{
-    .brand{
-      background-color: #dbeaf2;
-      @include screen(640px) {
-        padding: 9% 0% 8% 4%;
-      }
-      h3, h4,.share-text{
-        color: #00659b;
-      }
-      .share-text{
-        color: #00659b;
+
+    &.active {
+      .clothes {
+        animation: clothes 2s infinite;
       }
     }
   }
+
+  // 2
+  .resule-2 {
+    .brand {
+      background-color: #dbeaf2;
+      margin: 6% 0 2.2% 0;
+
+      @include screen(640px) {
+        padding: 4% 0% 8% 4%;
+
+      }
+
+      h3,
+      h4,
+      .share-text {
+        color: #00659b;
+      }
+
+    }
+
+    .share-text {
+      color: #00659b;
+    }
+    &.active{
+       .right-content .edn-p2{
+        animation: plant .4s 0.8s forwards cubic-bezier(.89,-0.93,.2,1.58);
+
+      }
+    }
+  }
+
   // 3
-  .resule-3{
-    .right-content{
-      .edn-p1{
+  .resule-3 {
+    .right-content {
+      .edn-p1 {
         left: 5%;
         top: -1%;
         z-index: 1;
         max-width: 304px;
         width: 95%;
       }
-      .edn-p2{
+
+      .edn-box {
+        position: absolute;
         right: 0;
         top: 22%;
         max-width: 294px;
         width: 92%;
+
+        @include screen(640px) {
+          // width: 38%;
+        }
       }
-    } 
-    .slogan-img{
+
+      .edn-p2-img {
+        position: absolute;
+        top: 1%;
+        left: 10.6%;
+        width: 32.998%;
+        height: 0;
+        padding-bottom: 18.4%;
+        z-index: 1;
+        mix-blend-mode: overlay;
+      }
+
+      .edn-p2 {
+        position: relative;
+        width: auto;
+        max-width: initial;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .slogan-img {
       margin-bottom: 6%;
     }
-    .brand{
+
+    .brand {
       background-color: #f4edbf;
-      margin: 0% 0 3.2% 0;
+      margin: 0% 0 4.2% 0;
+
       @include screen(640px) {
-        padding: 9% 0% 8% 4%;
-      margin: 1% 0 4.2% 0;
+        padding: 4% 0% 7% 4%;
+        margin: 1% 0 4.2% 0;
 
       }
-      h3, h4,.share-text{
+
+      h3,
+      h4,
+      .share-text {
         color: #d17f0a;
       }
     }
-    .share-text{
+
+    .share-text {
       color: #d17f0a;
     }
+    &.active{
+      .edn-p2-img {
+        animation: color_change 3s infinite alternate;
+      }
+    }
   }
+
   // 4
-  .resule-4{
-    .right-content{
-      .edn-p1{
+  .resule-4 {
+    .right-content {
+      .edn-p1 {
         left: 10%;
         top: -1%;
         z-index: 1;
         max-width: 187px;
         width: 59%;
+
       }
-      .edn-p2{
+
+      .edn-p2 {
         right: 0;
         top: 29%;
         max-width: 210px;
         width: 66%;
-      }
-    } 
-    .slogan-img{
-      margin-bottom: 6%;
-    }
-    .brand{
-      background-color: #c5ce9f;
-      margin: 0% 0 3.2% 0;
-      @include screen(640px) {
-        padding: 9% 0% 8% 4%;
-      margin: 1% 0 4.2% 0;
 
       }
-      h3, h4,.share-text{
+    }
+
+    .slogan-img {
+      margin-bottom: 6%;
+    }
+
+    .brand {
+      background-color: #c5ce9f;
+      margin: 0% 0 2.2% 0;
+
+      @include screen(640px) {
+        padding: 3% 0% 5% 4%;
+        margin: 1% 0 4.2% 0;
+
+      }
+
+      h3,
+      h4,
+      .share-text {
         color: #4b5911;
       }
     }
-    .share-text{
+
+    .share-text {
       color: #4b5911;
     }
   }
 
   @include screen(640px) {
-    .slogan{
-      font-size: 2vw;
-      letter-spacing: 10px;
+    .resule-3 .right-content{
+      top: 3vh;
     }
-    .left-content ul{
-      font-size: 2.7vw;
+    .left-content{
+      width: 53%;
+      ul{
+        font-size: 3vw;
+      }
     }
-    .left-content li:before{
+    .left-content li br{
+      display: none;
+    }
+    .slogan {
+      font-size: 3.5vw;
+      letter-spacing: 6px;
+    }
+
+    .resule-3 .left-content {
+      width: 62%;
+    }
+
+
+
+    .left-content li:before {
       width: 5px;
       height: 4px;
-      top: 8px;
+      top: 6px;
     }
-    .brand{
+
+    .brand {
       font-size: 3.2vw;
       padding: 6% 0% 6% 4%;
     }
-    .share-text{
+
+    .share-text {
       font-size: 3.4vw;
       letter-spacing: 2.5px;
     }
-    .button-share a{
+
+    .button-share a {
       font-size: 3.5vw;
       line-height: 50px;
     }
   }
+
 }
 
+
+// 11 pro 11 pro max  x
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+  .isMobile .resule{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+}
+// 11 
+@media only screen 
+and (device-width : 414px) 
+and (device-height : 896px) 
+and (-webkit-device-pixel-ratio : 2) { 
+  .isMobile .resule{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+/* 8+ 7+ 6+ */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .isMobile .resule{
+      top: 53%;
+    }
+  
+    .isMobile #section-resule .resule-1 .brand {
+      padding: 3% 0% 4% 4%;
+    }
+  .isMobile #section-resule .resule-1 .slogan-img {
+    margin-bottom: 5%;
+  }
+  .isMobile #section-resule .resule-1 .left-content li{
+    margin-bottom: 1%;
+  }
+  .isMobile #section-resule .resule-1 .brand{
+    margin-top: 4%;
+  }
+  .isMobile #section-resule .resule-2 .brand {
+    padding: 3% 0% 5% 4%;
+  }
+}
+/* 8 7 6 */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2) {
+  .isMobile #section-resule .resule-1 .brand {
+      padding: 3% 0% 4% 4%;
+  }
+  .isMobile #section-resule .resule-1 .slogan-img {
+    margin-bottom: 5%;
+  }
+  .isMobile #section-resule .resule-1 .left-content li{
+    margin-bottom: 1%;
+  }
+  .isMobile #section-resule .resule-1 .brand{
+    margin-top: 0;
+  }
+  .isMobile #section-resule .resule-2 .brand {
+    padding: 3% 0% 5% 4%;
+  }
+  .isMobile #section-resule .resule-3 .brand {
+    padding: 3% 0% 3% 4%;
+  }
+  .isMobile #section-resule .resule-4 .brand {
+    padding: 3% 0% 3% 4%;
+    margin-bottom: 3%;
+  }
+
+}
+
+
+
+@include screen(360px) {
+  .isMobile .resule{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #section-resule .resule-4 .right-content .edn-p1{
+    top: 6%;
+  }
+
+    #section-resule .resule-1 .right-content{
+      top: 4vh;
+    }
+
+}

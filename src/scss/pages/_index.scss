@@ -1,0 +1,14 @@
+.in-bg{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 642px;
+    height: 100%;
+    border: 1px solid #ccc;
+    z-index: 0;
+     @include screen(640px) {
+       display:none;
+     }
+}

@@ -17,12 +17,15 @@ class Topic5 {
     
     const tl = new TimelineMax({
       onComplete: () => {
-        $('.topic5').addClass('active')
+        
         // console.log('Rule show Complete')
       }
     })
+    $('.topic5').addClass('active')
     let dealy = 0
     TweenMax.to('.topic5', 0.5, {autoAlpha: 1, delay: dealy})
+    tl.fromTo('.topic5 .topic-item-1', 1, {autoAlpha: 0,y:30}, {autoAlpha: 1,y:0, ease: Power2.easeOut},0.2)
+    tl.fromTo('.topic5 .topic-item-2', 1, {autoAlpha: 0,y:30}, {autoAlpha: 1,y:0, ease: Power2.easeOut},0.2)
   }
 
   hide() {
@@ -31,9 +34,8 @@ class Topic5 {
     let delay = 0
     TweenMax.to('.topic5', 0.5, {
       autoAlpha: 0, delay: delay, onComplete: () => {
-        // TweenMax.set('#section-rule .title-dec', { alpha: 0, y: 30 })
-        // TweenMax.set('#section-rule .content-box', { alpha: 0, y: 30 })
-        // TweenMax.set('#section-rule .rule-btn', { alpha: 0, y: 30 })
+        TweenMax.set('.topic5 .topic-item-1',{autoAlpha: 0,y:30})
+        TweenMax.set('.topic5 .topic-item-2',{autoAlpha: 0,y:30})
       }
     })
   }

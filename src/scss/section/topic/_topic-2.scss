@@ -24,6 +24,8 @@
     }
   }
   .topic-item-1{
+    opacity: 1;
+
     width: 81%;
     max-width: 509px;
     margin: 0 0% 0% 0%;
@@ -31,29 +33,109 @@
     bottom: 0%;
   }
   .topic-item-2{
+    opacity: 1;
+
     width: 45%;
     max-width: 277px;
-    // margin: 34.6% 0% 0% 0.3%;
     bottom: 4.2%;
     z-index: 2;
+    animation: hand 4s 1.7s infinite;
+
   }
   
   .topic-item-3{
+    opacity: 1;
+
     width: 66%;
     max-width: 418px;
-    right: 0;
-    margin: 0 6% 0% 0%;
-    bottom: 12%;
+    right: 6%;
+    bottom: 14%;
     z-index: 1;
-  }
+  } 
+  .topic-item-1-box{
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    .topic-item-1-content{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
 
+    }
+  }
   @include screen(640px) {
-
   .topic-item-3{
-    margin-right: 5%;
+    right: 5%;
+    bottom: 12%;
   }
+  }
+}
+
+@include screen(640px) {
+
+
+}
+@include screen(375px) {
+  .isMobile .topic2 .topic-box {
+    width: 102%;
+    top: 0%;
+    @include screen(360px){
+      top: 1%;
+    }
   }
 }
 
 
 
+
+
+
+// 11 pro 11 pro max  x
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+  .isMobile .topic2 .topic-box {
+    width: 102%;
+    top: -3%;
+  }
+  // .isMobile .topic2 .topic-item-3{
+  //   bottom: 13.6%;
+  // }
+}
+// 11 
+@media only screen 
+and (device-width : 414px) 
+and (device-height : 896px) 
+and (-webkit-device-pixel-ratio : 2) { 
+  .isMobile .topic2 .topic-box {
+    width: 102%;
+    top: -6%;
+  }
+  // .isMobile .topic2 .topic-item-3{
+  //   bottom: 13.3%;
+  // }
+}
+/* 8+ 7+ 6+ */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .isMobile .topic2 .topic-box {
+      width: 102%;
+      top: 7%;
+    }
+}
+/* 8 7 6 */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2) {
+    .isMobile .topic2 .topic-box {
+      width: 102%;
+      top: 7%;
+    }
+}

@@ -1,4 +1,4 @@
-#section-intor{
+#section-intor {
   display: none;
   position: fixed;
   top: 0;
@@ -7,19 +7,11 @@
   max-width: 640px;
   height: 100%;
   z-index: 9;
-  background: rgba(#fff,0.92);
+  background: rgba(#fff, 0.92);
   left: 50%;
   transform: translateX(-50%);
-  // overflow: hidden;
-  // position: absolute;
- 
-  // left: 50%;
-  // top: 0;
-  // transform: translate(-50%, 0);
-
-  // height: 100vh;
-  // overflow: initial;
-  .header{
+  overflow: auto;
+  .header {
     position: relative;
     width: 94%;
     // margin: 0 auto 7.6% auto;
@@ -28,75 +20,107 @@
     padding: pxTo100(15) 0;
     // padding: 15px 0;
   }
-  .in-logobox{
+
+  .in-logobox {
     width: 100%;
     display: flex;
     align-items: center;
   }
-  .in-logo{
+
+  .in-logo {
     opacity: 0;
     max-width: 85px;
     width: 15%;
     margin-right: 22px;
   }
-  .in-title{
+
+  .in-title {
     width: 49%;
     max-width: 286px;
     opacity: 0.1;
   }
-  .in-menu{
+
+  .in-menu {
     position: absolute;
-    top:  15px;
-    right:  3.2%;
+    top: 15px;
+    right: 3.2%;
     width: 11%;
     max-width: 65px;
     opacity: 0.1;
   }
-  .bg{
+
+  .bg {
     width: 94%;
     margin: auto;
   }
-  .container{
+
+  .container {
     width: 94%;
     margin: auto;
   }
 
 
-  .in-im{
+  .in-im {
     display: block;
     margin: 0 auto pxToEm(55) auto;
     width: 79%;
     max-width: 444px;
   }
-  .in-step{
+
+  .in-step {
     font-size: 24px;
     // font-size: 1.6vw;
     line-height: 1.5;
     margin-bottom: 4%;
-    span{
+
+    span {
       display: block;
     }
-    b{
+
+    b {
       color: $red;
     }
   }
-  .gift-time{
+
+  .gift-time {
     margin-bottom: 40px;
-    h3{
+
+    h3 {
       font-size: 24px;
-    // font-size: 1.6vw;
+      // font-size: 1.6vw;
       color: $red;
       margin-bottom: 2%;
     }
-    img{
+
+    img {
       width: 98%;
       max-width: 585px;
     }
   }
 
   @include screen(640px) {
-    .in-step, .gift-time h3{
+
+    .in-step,
+    .gift-time h3 {
       font-size: 4vw;
+    }
+
+    .in-im {
+      margin-bottom: 2.4375rem;
+    }
+
+    .gift-time h3,
+    .in-step {
+      font-size: 3.6vw;
+
+    }
+
+    .gift-time {
+      margin-bottom: 3%;
     }
   }
 }
+
+// #section-intor .container {
+//   display: none;
+// }

@@ -1,5 +1,4 @@
 #section-rule{
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +6,7 @@
   max-width: 640px;
   height: 100%;
   z-index: 9;
-  background: rgba(#fff,1);
+  background:none;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
@@ -66,9 +65,28 @@
       }
     }
   }
+
   @include screen(640px) {
     .rule-list{
       font-size: 3.6vw;
     }
+    .ru-header{
+      padding: 3%;
+    }
   }
 }
+
+
+  .ru-header{
+    padding: 8.945%;
+    width: 100%;
+    max-width: 640px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 11;
+    background: #fff;
+  }

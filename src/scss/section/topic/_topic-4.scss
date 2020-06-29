@@ -32,6 +32,10 @@
     z-index: 5;
     .bab-content{
       position: relative;
+      top: -1px;
+      @include screen(640px) {
+        top:0;
+      }
     }
 
   }
@@ -45,8 +49,10 @@
   .topic-item-2{
     width: 33%;
     max-width: 187px;
-    top: 18.9%;
+    top: 14.9%;
     left: 0%;
+    transform: rotate(0deg);
+
   }
 
   .topic-item-3{
@@ -61,6 +67,15 @@
     max-width: 298px;
     bottom: 15.5%;
     left: 3%;
+  }
+  &.active{
+     .topic-item-1{
+
+      animation: bab1 2s -1s infinite;
+     }
+    .topic-item-2{
+      animation: bab 2s -1s infinite;
+    }
   }
   @include screen(640px) {
 

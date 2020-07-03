@@ -15,7 +15,6 @@ class Resule1 {
     const tl = new TimelineMax({
       onComplete: () => {
         $('#section-resule,.resule-1').addClass('active')
-        // $('.resule-1').addClass('active')
         // console.log('Rule show Complete')
       }
     })

@@ -72,12 +72,18 @@ body {
 
 // #Wrapper 
 #wrapper {
-  width: 100%;
+ 
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  height: 100vh;
   max-width: 640px;
-  height: 100%;
-  margin: auto;
-  position: relative;
-  overflow: auto;
+  width: calc(640 / 960 * 100vh);
+  overflow: initial;
+  border: 1px solid #ccc;
 }
 
 
@@ -120,4 +126,19 @@ body {
   &.no-bg{
     background:none;
   }
+}
+
+@include screen(640px) {
+  #wrapper {
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    overflow: auto;
+    border: none;
+    overflow: hidden;
+    left: 0;
+    transform: translate(0, 0);
+}
 }

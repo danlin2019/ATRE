@@ -199,7 +199,7 @@ function checkSection(_class) {
 
 
 if (location.hostname === 'localhost') {
-  goto('Resule3')
+  goto('Resule4')
 } else {
   goto('Index')
 }

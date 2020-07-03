@@ -3,23 +3,23 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  // max-width: 640px;
   margin: 0 auto pxTo100(40) auto;
-
   z-index: 999;
 
   .header-box {
-    padding: pxTo100(8) 3% pxTo100(8) 1.3%;
-    @include screen(640px) {
-      padding: 3% ;
-    }
-    width: 100%;
+        // padding: 4.25% 3% 1.25% 1.3%;
+    padding: 3.25% 3% 1.25% 1.3%;
+    width: 97%;
     max-width: 640px;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    @include screen(640px) {
+      width: 100%;
+      padding: 3% ;
+    }
     // background: $white;
     &.active {
       .title {
@@ -39,6 +39,7 @@ header {
   .logo {
     max-width: 85px;
     width: 15%;
+    width: calc(85 / 960 * 100vh);
     margin-right: 3%;
     @include screen(640px) {
     width: 16%; 
@@ -67,3 +68,21 @@ header {
     }
   }
 }
+
+// @include screen(1440px) {
+//   header .header-box {
+//     max-width: 549px;
+//   }
+// }
+
+// @include screen(1366px) {
+//   header .header-box {
+//     max-width: 444px;
+//   }
+// }
+
+// @include screen(1280px) {
+//   header .header-box {
+//     max-width: 480px;
+//   }
+// }

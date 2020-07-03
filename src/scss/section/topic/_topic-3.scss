@@ -38,6 +38,9 @@
     @include screen(1336px) {
       width: 54%;
     }
+    @include screen(1336px) {
+      width:65%;
+    }
     @include screen(640px) {
      width: 73%;
     }

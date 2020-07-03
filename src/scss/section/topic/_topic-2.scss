@@ -60,6 +60,9 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    @include screen(1440px) {
+      width: 96%;
+    }
     .topic-item-1-content{
       position: relative;
       width: 100%;
@@ -68,7 +71,14 @@
 
     }
   }
+
   @include screen(640px) {
+    .topic-box{
+      width: 100%;
+    }
+    .topic-item-1-box{
+      width: 100%;
+    }
   .topic-item-3{
     right: 5%;
     bottom: 12%;
@@ -76,10 +86,7 @@
   }
 }
 
-@include screen(640px) {
 
-
-}
 @include screen(375px) {
   .isMobile .topic2 .topic-box {
     width: 102%;

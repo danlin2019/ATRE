@@ -5,7 +5,7 @@ div#section-news
     .add
      | *台北市信義區松智路17號 *週日至週三 11:00 - 21:30 
      br
-     |*週四至週六 (含例假日前夕) 11:00 - 22:00 *部分專櫃時間調整
+     |*週四至週六 (含例假日前夕) 11:00 - 22:00 #[br]*部分專櫃時間調整
     ul.news-list
       li(v-for="(items,index) in newsList" :class="'style-' + (index)")
         img(:src="items.img")
@@ -47,7 +47,7 @@ div#section-news
         img.add-img(src="img/news/news-img-4.jpg")
         .add-list-text
           h4 atre 上野
-          p 來上野，可以安排博物館感受文藝氣氛，接著到阿美橫丁挑選南北貨，#[br]最後來atré上野喝杯咖啡或來碗人氣拉麵！#[br]逛逛上野，絕不能錯過atre上野。
+          p 來上野，可以安排博物館感受文藝氣氛，接著到阿美橫丁挑選南北貨，#[br]最後來atre上野喝杯咖啡或來碗人氣拉麵！#[br]逛逛上野，絕不能錯過atre上野。
           p.ne-add 地址：東京都台東区上野7-1-1
     .btn-news
       a.btn(href="https://atre.com.tw/floorguide" target="_blank") 更多品牌介紹 >

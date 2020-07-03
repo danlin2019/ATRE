@@ -1,14 +1,32 @@
-.in-bg{
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 642px;
-    height: 100%;
-    border: 1px solid #ccc;
-    z-index: 0;
-     @include screen(640px) {
-       display:none;
-     }
+.in-bg {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  height: 100vh;
+  max-width: 642px;
+  width: calc(640 / 960 * 100vh);
+  overflow: initial;
+  // border: 1px solid #ccc;
 }
+
+// @include screen(1440px) {
+//   .in-bg{
+//     max-width: 552px;
+//   }
+// }
+
+// @include screen(1366px) {
+//   .in-bg{
+//     max-width: 452px;
+//   }
+// }
+// @include screen(1280px) {
+//   .in-bg{
+//     max-width: 494px;
+//   }
+// }

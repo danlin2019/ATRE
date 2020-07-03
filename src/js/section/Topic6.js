@@ -9,7 +9,9 @@ class Topic6 {
     // console.log('Topic6')
     $('.topic6 .topic-radio label').click(() => {
       $('.btn-in').addClass('go-end')
-      $('#section-intor').stop().fadeIn()
+      $('#section-intor').stop().fadeIn().addClass('open2')
+      $('.header-box').css('background-color','#ffffff')
+
     })
   }
 
@@ -34,7 +36,7 @@ class Topic6 {
     // console.log('Rule hide')
     $('.topic6').removeClass('active')
     $('.btn-in').removeClass('go-end')
-
+    
     let delay = 0
     TweenMax.to('.topic6', 0.5, {
       autoAlpha: 0, delay: delay, onComplete: () => {

@@ -21,12 +21,15 @@ var wrapper = new Vue({
     goTest() {
       if (!this.data) {
         alert('請輸入您的名稱')
+        
       } else {
         $('#section-intor').stop().fadeIn()
         this.userName = this.data
+        $('.header-box').css('background-color','#ffffff')
       }
     },
     goStep() {
+      $('.header-box').css('background-color','')
       let btn = $('.btn-in')
       if (btn.hasClass('go-step')) {
         $('#section-intor').stop().fadeOut()
@@ -41,10 +44,6 @@ var wrapper = new Vue({
         const q6 = Number(this.test6)
         this.num = q1 + q2 + q3 + q4 + q5 + q6
         this.numtotal = this.num
-        // console.log('this.num')
-        // console.log(this.num)
-        // console.log('this.numtotal')
-        // console.log(this.numtotal)
         // 判斷狀態
         let num = null
         // https://ithelp.ithome.com.tw/articles/10210319      
@@ -82,6 +81,8 @@ var wrapper = new Vue({
     },
     goHome() {
       $('.hamburger-menu').removeClass('animate')
+      $('.nav-box li').removeClass('active')
+      $('.nav-box li:eq(0)').addClass('active')
         $('#section-intor').stop().fadeOut()
         this.isActive = false
         $('.nav-box').stop().fadeOut(0)
@@ -99,6 +100,7 @@ var wrapper = new Vue({
       goto('News')
       $('.hamburger-menu').removeClass('animate')
       $('.nav-box').stop().fadeOut()
+      $('#section-intor').stop().fadeOut()
       $('.header-box').css('background-color','#ffffff')
       $('.nav-box li').removeClass('active')
       $('.nav-box li:eq(1)').addClass('active')
@@ -108,14 +110,18 @@ var wrapper = new Vue({
       this.isActive = false
       goto('Rule')
       $('.hamburger-menu').removeClass('animate')
+      $('#section-intor').stop().fadeOut()
       $('.nav-box').stop().fadeOut()
       $('.header-box').css('background-color','#ffffff')
        $('.bg-1').addClass('active')
     },
     // 選單
     menuList() {
-      
-      // console.log(0)
+      setTimeout(()=> {
+        $('#section-news,#section-rule').scrollTop(0)
+        // $('').scrollTop(0)
+      },400)
+
       this.isActive = !this.isActive
       if (this.isActive) {
         $('.hamburger-menu').addClass('animate')
